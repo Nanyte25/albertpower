@@ -4,8 +4,9 @@
       Albert G. Power <span>RHA</span>
     </a>
     <ul class="nav-links" id="nav-links">
-      <li><a href="{{ '/#biography' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Biography</a></li>
+      <li><a href="{{ '/#biography' | relative_url }}">Biography</a></li>
       <li><a href="{{ '/works/' | relative_url }}" {% if page.url contains '/works/' %}aria-current="page"{% endif %}>Works</a></li>
+      <li><a href="{{ '/gallery/' | relative_url }}" {% if page.url contains '/gallery/' %}aria-current="page"{% endif %}>Gallery</a></li>
       <li><a href="{{ '/#timeline' | relative_url }}">Timeline</a></li>
       <li><a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}aria-current="page"{% endif %}>Writing</a></li>
       <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
