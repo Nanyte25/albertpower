@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<header class="page-header page-header--work">
+  <div class="page-header-inner">
+    <p class="hero-eyebrow">{{ page.medium | default: "Sculpture" }}</p>
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.year %}<p class="page-subtitle">{{ page.year }}{% if page.location %} · {{ page.location }}{% endif %}</p>{% endif %}
+  </div>
+</header>
+
+<article class="work-detail">
+  <div class="work-detail-inner">
+
+    {% if page.image %}
+    <figure class="work-detail-image">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" />
+      {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+
+    <div class="work-detail-body">
+      <dl class="work-meta-list">
+        {% if page.year %}<div><dt>Date</dt><dd>{{ page.year }}</dd></div>{% endif %}
+        {% if page.medium %}<div><dt>Medium</dt><dd>{{ page.medium }}</dd></div>{% endif %}
+        {% if page.dimensions %}<div><dt>Dimensions</dt><dd>{{ page.dimensions }}</dd></div>{% endif %}
+        {% if page.location %}<div><dt>Location</dt><dd>{{ page.location }}</dd></div>{% endif %}
+        {% if page.collection %}<div><dt>Collection</dt><dd>{{ page.collection }}</dd></div>{% endif %}
+      </dl>
+
+      <div class="work-detail-text">
+        {{ content }}
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<div class="post-nav-row">
+  <div class="post-nav-inner">
+    <a href="{{ '/works/' | relative_url }}" class="btn-secondary">← All works</a>
+  </div>
+</div>

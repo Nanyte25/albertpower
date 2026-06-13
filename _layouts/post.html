@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <p class="hero-eyebrow">
+      {{ page.category | default: "Research" }}
+      {% if page.tags %}&nbsp;·&nbsp;{{ page.tags | join: " · " }}{% endif %}
+    </p>
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="page-subtitle">{{ page.subtitle }}</p>{% endif %}
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%-d %B %Y" }}
+      </time>
+      {% if page.author %}&nbsp;·&nbsp;{{ page.author }}{% endif %}
+      {% if page.read_time %}&nbsp;·&nbsp;{{ page.read_time }} min read{% endif %}
+    </p>
+  </div>
+</header>
+
+<article class="post-body">
+  {{ content }}
+</article>
+
+<div class="post-nav-row">
+  <div class="post-nav-inner">
+    {% if page.previous.url %}
+    <a href="{{ page.previous.url | relative_url }}" class="post-nav-link post-nav-link--prev">
+      <span class="post-nav-label">← Earlier</span>
+      <span class="post-nav-title">{{ page.previous.title }}</span>
+    </a>
+    {% endif %}
+    <a href="{{ '/blog/' | relative_url }}" class="btn-secondary">All writing</a>
+    {% if page.next.url %}
+    <a href="{{ page.next.url | relative_url }}" class="post-nav-link post-nav-link--next">
+      <span class="post-nav-label">Later →</span>
+      <span class="post-nav-title">{{ page.next.title }}</span>
+    </a>
+    {% endif %}
+  </div>
+</div>

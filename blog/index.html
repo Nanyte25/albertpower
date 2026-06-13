@@ -1,0 +1,47 @@
+---
+layout: default
+title: "Writing & Research"
+description: "Essays, notes, and critical reflections on the life and work of Albert George Power RHA."
+permalink: /blog/
+---
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <p class="hero-eyebrow">Archive</p>
+    <h1 class="page-title">Writing &amp; Research</h1>
+    <p class="page-subtitle">Essays, notes, and critical reflections on the life and work of Albert George Power RHA</p>
+  </div>
+</header>
+
+<main class="blog-index-main">
+  <div class="section-inner">
+
+    {% assign featured = site.posts.first %}
+    {% if featured %}
+    <article class="blog-index-card blog-index-card--feature">
+      <div class="bic-meta">
+        <span class="blog-date">{{ featured.category | default: "Research Essay" }} · {{ featured.date | date: "%Y" }}</span>
+        {% if featured.tags.first %}<span class="bic-tag">{{ featured.tags.first }}</span>{% endif %}
+      </div>
+      <h2><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h2>
+      <p>{{ featured.excerpt | strip_html | truncate: 320 }}</p>
+      <a href="{{ featured.url | relative_url }}" class="read-more">Read essay →</a>
+    </article>
+    {% endif %}
+
+    <div class="blog-index-grid">
+      {% for post in site.posts offset: 1 %}
+      <article class="blog-index-card">
+        <div class="bic-meta">
+          <span class="blog-date">{{ post.category | default: "Research Essay" }} · {{ post.date | date: "%Y" }}</span>
+          {% if post.tags.first %}<span class="bic-tag">{{ post.tags.first }}</span>{% endif %}
+        </div>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+        <a href="{{ post.url | relative_url }}" class="read-more">Read essay →</a>
+      </article>
+      {% endfor %}
+    </div>
+
+  </div>
+</main>

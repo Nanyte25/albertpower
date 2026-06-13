@@ -1,0 +1,52 @@
+---
+layout: default
+title: "Works"
+description: "A catalogue of Albert George Power's sculpture — public commissions, portrait busts, and ecclesiastical work."
+permalink: /works/
+---
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <p class="hero-eyebrow">Catalogue</p>
+    <h1 class="page-title">Works</h1>
+    <p class="page-subtitle">Public sculpture, portrait busts, and ecclesiastical commissions</p>
+  </div>
+</header>
+
+<main class="works-index-main">
+  <div class="section-inner">
+
+    <div class="works-index-grid">
+      {% assign sorted_works = site.works | sort: "order" %}
+      {% for work in sorted_works %}
+      <article class="work-index-card">
+        {% if work.image %}
+        <div class="wic-image">
+          <img src="{{ work.image | relative_url }}" alt="{{ work.image_alt | default: work.title }}" loading="lazy" />
+        </div>
+        {% else %}
+        <div class="wic-image wic-image--placeholder" aria-hidden="true">
+          <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="200" fill="#1C1A17"/>
+            <text x="150" y="105" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" fill="#8B7355" opacity="0.5" letter-spacing="3">ADD IMAGE</text>
+          </svg>
+        </div>
+        {% endif %}
+        <div class="wic-info">
+          <span class="work-year">{{ work.year }}</span>
+          <h2 class="work-title"><a href="{{ work.url | relative_url }}">{{ work.title }}</a></h2>
+          <p class="work-medium">{{ work.medium }}{% if work.location %} · {{ work.location }}{% endif %}</p>
+          <p class="work-desc">{{ work.content | strip_html | truncate: 160 }}</p>
+          <a href="{{ work.url | relative_url }}" class="read-more">View work →</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="archive-note">
+      {% include celtic-rule.html %}
+      <p>This catalogue is in active development. Works are being added as documentation is verified. If you have knowledge of unrecorded works by Albert G. Power, please <a href="{{ '/#contact' | relative_url }}">get in touch</a>.</p>
+    </div>
+
+  </div>
+</main>
