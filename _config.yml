@@ -1,13 +1,12 @@
 title: "Albert G. Power RHA"
 description: "A memorial archive dedicated to Albert George Power RHA (1881–1945), one of the foremost Irish sculptors of the twentieth century."
-url: "https://albertpower.io"
-baseurl: "/albert-power-rha"
+url: "https://albertpower.org"
+baseurl: ""
 
 author:
   name: "Power Family Archive"
-  email: "archive@albertgpower.ie"
+  email: "archive@albertpower.org"
 
-# Build
 markdown: kramdown
 highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
@@ -16,19 +15,16 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-# Plugins (all GitHub Pages safe)
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Collections
 collections:
   works:
     output: true
     permalink: /works/:name/
 
-# Defaults
 defaults:
   - scope:
       path: ""
@@ -42,9 +38,17 @@ defaults:
     values:
       layout: "work"
 
-# Exclude from build
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - .git
+  - vendor/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - setup.sh
+  - install-deps.sh
+  - .research_cache.json
+  - .setup_state
