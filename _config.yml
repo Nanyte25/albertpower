@@ -1,11 +1,11 @@
 title: "Albert G. Power RHA"
 description: "A memorial archive dedicated to Albert George Power RHA (1881–1945), one of the foremost Irish sculptors of the twentieth century."
-url: "https://abertpower.org"
+url: "https://albertpower.org"
 baseurl: ""
 
 author:
   name: "Power Family Archive"
-  email: "archive@abertpower.org"
+  email: "archive@albertpower.org"
 
 markdown: kramdown
 highlighter: rouge
