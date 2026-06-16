@@ -1,3 +1,57 @@
+#!/usr/bin/env bash
+# Run from inside ~/Downloads/albert-power-jekyll 4
+# Pushes ALL pending fixes in one go
+
+set -e
+[[ -f "_config.yml" ]] || { echo "Run from inside the repo"; exit 1; }
+
+echo "Applying all fixes..."
+
+# ── 1. Fix gallery CSS completely — rewrite entire block ───────────
+python3 << 'PYEOF'
+import re
+
+with open('assets/css/main.css', 'r') as f:
+    css = f.read()
+
+# Remove ALL existing gallery-img-wrap rules and any appended overrides
+css = re.sub(r'/\* Gallery fix[^\*]*\*/\s*\.gallery-img-wrap[^}]+\}[^}]+\}[^}]+\}', '', css)
+css = re.sub(r'\.gallery-img-wrap \{[^}]+\}', '', css)
+css = re.sub(r'\.gallery-img-wrap img \{[^}]+\}', '', css)
+css = re.sub(r'\.gallery-item:hover \.gallery-img-wrap img[^}]+\}', '', css)
+
+# Inject clean gallery rules right before .img-placeholder
+clean_rules = """.gallery-img-wrap {
+  width: 100%;
+  height: 220px;
+  background: var(--shadow);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0.6rem;
+}
+
+.gallery-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.gallery-item:hover .gallery-img-wrap img { transform: scale(1.03); }
+
+"""
+css = css.replace('.img-placeholder {', clean_rules + '.img-placeholder {')
+
+with open('assets/css/main.css', 'w') as f:
+    f.write(css)
+print("✓ Gallery CSS: clean 220px height rules injected")
+PYEOF
+
+# ── 2. Fix homepage index.html ─────────────────────────────────────
+# The current live index.html still has the old SVG placeholder hero.
+# Rewrite it with the Capuchin Archive image as hero.
+cat > index.html << 'INDEXEOF'
 ---
 layout: default
 title: "Albert G. Power RHA — Irish Sculptor 1881–1945"
@@ -222,3 +276,63 @@ description: "A memorial archive dedicated to Albert George Power RHA, one of th
     </div>
   </div>
 </section>
+INDEXEOF
+echo "✓ index.html rewritten with Capuchin images as hero"
+
+# ── 3. Fix gallery — use direct Capuchin/Wikipedia URLs as primary ──
+# The gallery onerror Liquid syntax doesn't work in plain HTML. 
+# Use absolute URLs directly instead.
+python3 << 'PYEOF'
+with open('gallery/index.html', 'r') as f:
+    html = f.read()
+
+# Fix image src paths — use relative_url properly and set direct fallback URLs
+replacements = [
+    # Collins - use direct Capuchin URL as primary since family archive photos are 0 bytes
+    ('src="{{ \'/assets/images/collins-death-mask.jpg\' | relative_url }}"',
+     'src="/assets/images/collins-death-mask.jpg" onerror="this.src=\'https://catholicarchives.ie/uploads/r/irish-capuchin-archives-2/d/9/2/d92e752038c424dec0f476ea3180864af99d1f3d4e1dc5d2ce313882b768096a/CA_CP-3-16-8-20-1.jpg\'"'),
+    ('src="{{ \'/assets/images/griffith-death-mask.jpg\' | relative_url }}"',
+     'src="/assets/images/griffith-death-mask.jpg" onerror="this.src=\'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Arthur_Griffith.jpg/600px-Arthur_Griffith.jpg\'"'),
+    ('src="{{ \'/assets/images/cathal-brugha-death-mask.jpg\' | relative_url }}"',
+     'src="/assets/images/cathal-brugha-death-mask.jpg" onerror="this.src=\'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Cathal_Brugha.jpg/600px-Cathal_Brugha.jpg\'"'),
+    ('src="{{ \'/assets/images/erskine-childers.jpg\' | relative_url }}"',
+     'src="/assets/images/erskine-childers.jpg" onerror="this.src=\'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Erskine_Childers.jpg/600px-Erskine_Childers.jpg\'"'),
+    ('src="{{ \'/assets/images/macswiney-life-mask.jpg\' | relative_url }}"',
+     'src="/assets/images/macswiney-life-mask.jpg" onerror="this.src=\'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Terence_MacSwiney.jpg/600px-Terence_MacSwiney.jpg\'"'),
+    ('src="{{ \'/assets/images/michael-collins-bust.jpg\' | relative_url }}"',
+     'src="/assets/images/michael-collins-bust.jpg" onerror="this.src=\'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michael_Collins_1922.jpg/600px-Michael_Collins_1922.jpg\'"'),
+    ('src="{{ \'/assets/images/countess-markievicz.jpg\' | relative_url }}"',
+     'src="/assets/images/countess-markievicz.jpg" onerror="this.src=\'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Countess_Markievicz.jpg/600px-Countess_Markievicz.jpg\'"'),
+    ('src="{{ \'/assets/images/wb-yeats.jpg\' | relative_url }}"',
+     'src="/assets/images/wb-yeats.jpg" onerror="this.src=\'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/WB_Yeats_by_George_Charles_Beresford.jpg/600px-WB_Yeats_by_George_Charles_Beresford.jpg\'"'),
+    ('src="{{ \'/assets/images/o-conaire-memorial.jpg\' | relative_url }}"',
+     'src="/assets/images/o-conaire-memorial.jpg" onerror="this.src=\'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Padraic_O_Conaire_statue_Galway.jpg/800px-Padraic_O_Conaire_statue_Galway.jpg\'"'),
+    ('src="{{ \'/assets/images/albert-power-portrait.jpg\' | relative_url }}"',
+     'src="https://catholicarchives.ie/uploads/r/irish-capuchin-archives-2/d/9/2/d92e752038c424dec0f476ea3180864af99d1f3d4e1dc5d2ce313882b768096a/CA_CP-3-16-8-20-1.jpg"'),
+    ('src="{{ \'/assets/images/power-working-carndonagh.jpg\' | relative_url }}"',
+     'src="/assets/images/power-working-carndonagh.jpg" onerror="this.src=\'https://catholicarchives.ie/uploads/r/irish-capuchin-archives-2/b/9/c/b9cc9845d5323040e8aaf6588ec45a737cfaab42af8f406e8aff59b0289f1b07/CA_CP-3-16-8-20-4.jpg\'"'),
+    ('src="{{ \'/assets/images/gresham-hotel-facade.jpg\' | relative_url }}"',
+     'src="/assets/images/gresham-hotel-facade.jpg" onerror="this.src=\'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Gresham_Hotel%2C_Dublin.jpg/800px-Gresham_Hotel%2C_Dublin.jpg\'"'),
+]
+
+for old, new in replacements:
+    html = html.replace(old, new)
+
+# Fix any remaining relative_url patterns
+import re
+html = re.sub(r"src=\"\{\{[^}]+\}\}\"", lambda m: m.group(0).replace("{{ '", '').replace("' | relative_url }}", ''), html)
+
+with open('gallery/index.html', 'w') as f:
+    f.write(html)
+print("✓ gallery/index.html: Wikipedia/Capuchin fallback URLs set")
+PYEOF
+
+# ── 4. Commit and push ─────────────────────────────────────────────
+git add -A
+git status --short
+git commit -m "fix: gallery 220px height, homepage Capuchin hero image, direct fallback URLs"
+git push
+echo ""
+echo "✓ Done! Site will rebuild in ~2 minutes"
+echo "  Check: https://albertpower.org/"
+echo "  Check: https://albertpower.org/gallery/"
