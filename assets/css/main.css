@@ -881,6 +881,3 @@ body {
 .publications-main{padding:3rem 1.5rem 6rem}
 @media(max-width:900px){.family-grid{grid-template-columns:1fr}.family-card--feature{grid-template-columns:1fr}.family-card--feature .family-card-image{aspect-ratio:16/9}.family-profile-grid{grid-template-columns:1fr}.family-works-grid{grid-template-columns:1fr 1fr}.pub-card{grid-template-columns:1fr}}
 
-/* Gallery fix — consistent height */
-.gallery-img-wrap { height: 220px !important; aspect-ratio: unset !important; }
-.gallery-img-wrap img { object-position: center top; }
