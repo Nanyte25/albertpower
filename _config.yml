@@ -4,8 +4,8 @@ url: "https://albertpower.org"
 baseurl: ""
 
 author:
-  name: "Power Family Archive"
-  email: "archive@albertpower.org"
+  name: "Mark Freer"
+  email: "freer.mark@gmail.com"
 
 markdown: kramdown
 highlighter: rouge
