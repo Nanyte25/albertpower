@@ -6,6 +6,8 @@
   address: "Benburb St, Stoneybatter, Dublin, D07 XKV4"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJS7Q-vDEMZ0gRSvVL0e06s1k"
   page_url: "/museums/collins-barracks/"
+  image: "/assets/images/collins-death-mask.jpg"
+  image_fallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michael_Collins_1922.jpg/600px-Michael_Collins_1922.jpg"
 
 - name: "Cathal Brugha Barracks"
   lat: 53.3268475
@@ -14,6 +16,8 @@
   address: "Military Road, Rathmines, Dublin, D06 RX00"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJJ5fiTRwMZ0gRnLaDUShe9ME"
   page_url: "/museums/cathal-brugha-barracks/"
+  image: "/assets/images/cathal-brugha-death-mask.jpg"
+  image_fallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Cathal_Brugha.jpg/600px-Cathal_Brugha.jpg"
 
 - name: "Eyre Square, Galway"
   lat: 53.274693
@@ -21,6 +25,8 @@
   works: ["Pádraic Ó Conaire memorial (1935)"]
   address: "Eyre Square, Galway"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJV8npfO-WW0gR_ruRSnRRtMk"
+  image: "/assets/images/o-conaire-memorial.jpg"
+  image_fallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Padraic_O_Conaire_statue_Galway.jpg/600px-Padraic_O_Conaire_statue_Galway.jpg"
 
 - name: "Gresham Hotel, O'Connell Street"
   lat: 53.3515365
@@ -28,6 +34,8 @@
   works: ["Decorative facade — urns, Coat of Arms, sphinxes, festoons (1926)"]
   address: "23 O'Connell Street Upper, Dublin, D01 C3W7"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJHQz3kIYOZ0gR_u9dPKm4aAE"
+  image: "/assets/images/gresham-hotel-facade.jpg"
+  image_fallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Gresham_Hotel%2C_Dublin.jpg/600px-Gresham_Hotel%2C_Dublin.jpg"
 
 - name: "Government Buildings, Merrion Street"
   lat: 53.3393365
@@ -35,6 +43,8 @@
   works: ["Figure of Science (1911)"]
   address: "Merrion St Upper, Dublin 2, D02 R583"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJbRmx55kOZ0gRBtjQrOd_HXM"
+  image: ""
+  image_fallback: ""
 
 - name: "Glasnevin Cemetery"
   lat: 53.3697293
@@ -42,6 +52,8 @@
   works: ["Albert Power Monument", "Downes Monument (1925)", "Archbishop Walsh Tomb (1929)", "Cait O'Kelly Memorial (1936)", "McKernan Memorial (1937, 1940)"]
   address: "Finglas Rd, Glasnevin, Dublin, D11 XA32"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJTf7MoOGZXUgRwg549JX1Nu0"
+  image: ""
+  image_fallback: ""
 
 - name: "Leinster House (Dáil Éireann)"
   lat: 53.3405901
@@ -49,6 +61,8 @@
   works: ["Portrait of Thomas Davis (1945) — Power's final work"]
   address: "Kildare St, Dublin 2, D02 TK75"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJk8HRHJoOZ0gRkE88yCQIObM"
+  image: ""
+  image_fallback: ""
 
 - name: "National Gallery of Ireland"
   lat: 53.3408887
@@ -56,6 +70,8 @@
   works: ["Portrait Bust of Michael Collins (1936)"]
   address: "Merrion Square W, Dublin 2, D02 K303"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJb1ecSpcOZ0gRMQ3w0Qyz_Vg"
+  image: "/assets/images/michael-collins-bust.jpg"
+  image_fallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michael_Collins_1922.jpg/600px-Michael_Collins_1922.jpg"
 
 - name: "Trinity College Library"
   lat: 53.3439553
@@ -63,3 +79,5 @@
   works: ["Marble replica of Roubiliac's bust of Jonathan Swift (1909–10, after the 1745 original held here)"]
   address: "College Green, Dublin 2, D02 VR66"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJVdIER5sOZ0gRbNBq2VcIW9Q"
+  image: ""
+  image_fallback: ""

@@ -29,22 +29,32 @@ permalink: /map/
       <h2 class="map-list-title">All Locations</h2>
       {% for loc in site.data.sculpture_map %}
       <article class="map-location-card">
-        <h3>{{ loc.name }}</h3>
-        <p class="map-location-address">{{ loc.address }}</p>
-        <ul class="map-works-list">
-          {% for work in loc.works %}
-          <li>{{ work }}</li>
-          {% endfor %}
-        </ul>
-        <div class="map-card-links">
-          <a href="{{ loc.maps_url }}" target="_blank" rel="noopener noreferrer" class="map-directions-link">
-            Open in Google Maps →
-          </a>
-          {% if loc.page_url %}
-          <a href="{{ loc.page_url | relative_url }}" class="map-directions-link">
-            Full collection page →
-          </a>
-          {% endif %}
+        {% if loc.image and loc.image != "" %}
+        <div class="map-card-image">
+          <img src="{{ loc.image | relative_url }}"
+               alt="{{ loc.name }}"
+               loading="lazy"
+               {% if loc.image_fallback and loc.image_fallback != "" %}onerror="this.src='{{ loc.image_fallback }}'"{% endif %} />
+        </div>
+        {% endif %}
+        <div class="map-card-body">
+          <h3>{{ loc.name }}</h3>
+          <p class="map-location-address">{{ loc.address }}</p>
+          <ul class="map-works-list">
+            {% for work in loc.works %}
+            <li>{{ work }}</li>
+            {% endfor %}
+          </ul>
+          <div class="map-card-links">
+            <a href="{{ loc.maps_url }}" target="_blank" rel="noopener noreferrer" class="map-directions-link">
+              Open in Google Maps →
+            </a>
+            {% if loc.page_url %}
+            <a href="{{ loc.page_url | relative_url }}" class="map-directions-link">
+              Full collection page →
+            </a>
+            {% endif %}
+          </div>
         </div>
       </article>
       {% endfor %}
@@ -84,8 +94,14 @@ permalink: /map/
       var pageLink = loc.page_url
         ? '<a href="' + loc.page_url + '">Full collection page →</a>'
         : '';
+      var imageHtml = '';
+      if (loc.image && loc.image !== '') {
+        imageHtml = '<img class="popup-img" src="' + loc.image + '" alt="' + loc.name + '" ' +
+          (loc.image_fallback ? 'onerror="this.src=\'' + loc.image_fallback + '\'"' : '') + ' />';
+      }
       var popupHtml =
         '<div class="map-popup">' +
+        imageHtml +
         '<strong>' + loc.name + '</strong>' +
         '<ul>' + worksHtml + '</ul>' +
         '<a href="' + loc.maps_url + '" target="_blank" rel="noopener noreferrer">Open in Google Maps →</a>' +
