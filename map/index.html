@@ -1,9 +1,10 @@
 ---
 layout: default
 title: "Sculpture Map"
-description: "Interactive map of Albert G. Power's works across Ireland."
+description: "Interactive map of Albert G. Power's works across Ireland — museums, public squares, cemeteries and government buildings."
 permalink: /map/
 ---
+
 <header class="page-header">
   <div class="page-header-inner">
     <p class="hero-eyebrow">Archive</p>
@@ -11,10 +12,19 @@ permalink: /map/
     <p class="page-subtitle">Where his works can be found today</p>
   </div>
 </header>
+
 <main class="map-main">
   <div class="section-inner">
-    <p class="map-intro">Albert G. Power's works are held across museums, public squares, cemeteries, and government buildings throughout Ireland. Click a pin for details, or open in Google Maps to plan a visit. This is a working document — more locations will be added as research continues.</p>
+
+    <p class="map-intro">
+      Albert G. Power's works are held across museums, public squares, cemeteries, and
+      government buildings throughout Ireland. Tap a pin for details, or "Open in Google
+      Maps" to plan a visit. This is a working document — more locations will be added
+      as research continues.
+    </p>
+
     <div id="sculpture-map" class="sculpture-map-embed" role="img" aria-label="Map of Albert G. Power sculpture locations"></div>
+
     <div class="map-location-list">
       <h2 class="map-list-title">All Locations</h2>
       {% for loc in site.data.sculpture_map %}
@@ -22,33 +32,77 @@ permalink: /map/
         <h3>{{ loc.name }}</h3>
         <p class="map-location-address">{{ loc.address }}</p>
         <ul class="map-works-list">
-          {% for work in loc.works %}<li>{{ work }}</li>{% endfor %}
+          {% for work in loc.works %}
+          <li>{{ work }}</li>
+          {% endfor %}
         </ul>
-        <a href="{{ loc.maps_url }}" target="_blank" rel="noopener noreferrer" class="map-directions-link">Open in Google Maps →</a>
+        <div class="map-card-links">
+          <a href="{{ loc.maps_url }}" target="_blank" rel="noopener noreferrer" class="map-directions-link">
+            Open in Google Maps →
+          </a>
+          {% if loc.page_url %}
+          <a href="{{ loc.page_url | relative_url }}" class="map-directions-link">
+            Full collection page →
+          </a>
+          {% endif %}
+        </div>
       </article>
       {% endfor %}
     </div>
+
   </div>
 </main>
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  var locations = {{ site.data.sculpture_map | jsonify }};
-  var map = L.map('sculpture-map', { scrollWheelZoom: false }).setView([53.35, -6.7], 7);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    maxZoom: 18
-  }).addTo(map);
-  var bronzeIcon = L.divIcon({ className: 'custom-map-pin', html: '<div class="pin-dot"></div>', iconSize: [18, 18], iconAnchor: [9, 9] });
-  var bounds = [];
-  locations.forEach(function (loc) {
-    var worksHtml = loc.works.map(function (w) { return '<li>' + w + '</li>'; }).join('');
-    var popupHtml = '<div class="map-popup"><strong>' + loc.name + '</strong><ul>' + worksHtml + '</ul><a href="' + loc.maps_url + '" target="_blank" rel="noopener noreferrer">Open in Google Maps →</a></div>';
-    var marker = L.marker([loc.lat, loc.lng], { icon: bronzeIcon }).addTo(map);
-    marker.bindPopup(popupHtml);
-    bounds.push([loc.lat, loc.lng]);
+  document.addEventListener('DOMContentLoaded', function () {
+    var locations = {{ site.data.sculpture_map | jsonify }};
+    var isMobile = window.innerWidth < 700;
+
+    var map = L.map('sculpture-map', {
+      scrollWheelZoom: false,
+      tap: true
+    }).setView([53.35, -6.7], isMobile ? 6 : 7);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    var bronzeIcon = L.divIcon({
+      className: 'custom-map-pin',
+      html: '<div class="pin-dot"></div>',
+      iconSize: [20, 20],
+      iconAnchor: [10, 10]
+    });
+
+    var bounds = [];
+
+    locations.forEach(function (loc) {
+      var worksHtml = loc.works.map(function (w) { return '<li>' + w + '</li>'; }).join('');
+      var pageLink = loc.page_url
+        ? '<a href="' + loc.page_url + '">Full collection page →</a>'
+        : '';
+      var popupHtml =
+        '<div class="map-popup">' +
+        '<strong>' + loc.name + '</strong>' +
+        '<ul>' + worksHtml + '</ul>' +
+        '<a href="' + loc.maps_url + '" target="_blank" rel="noopener noreferrer">Open in Google Maps →</a>' +
+        pageLink +
+        '</div>';
+
+      var marker = L.marker([loc.lat, loc.lng], { icon: bronzeIcon }).addTo(map);
+      marker.bindPopup(popupHtml, { maxWidth: isMobile ? 220 : 280 });
+      bounds.push([loc.lat, loc.lng]);
+    });
+
+    if (bounds.length > 0) {
+      map.fitBounds(bounds, { padding: [30, 30] });
+    }
+
+    window.addEventListener('resize', function () {
+      map.invalidateSize();
+    });
   });
-  if (bounds.length > 0) { map.fitBounds(bounds, { padding: [40, 40] }); }
-});
 </script>
