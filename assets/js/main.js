@@ -80,53 +80,111 @@
 })();
 
 // ── 4. Language Switcher (EN / GA / FI) ───────────────────────────
-// Translations injected at build time from _data/i18n.yml via _layouts/default.html
-// The global AGP_I18N object is set in a <script> tag in the <head>.
 (function () {
   var STORAGE_KEY = 'agp-lang';
 
+  var translations = {
+    en: {
+      nav_biography: 'Biography',
+      nav_works: 'Works',
+      nav_gallery: 'Gallery',
+      nav_map: 'Map',
+      nav_family: 'Family',
+      nav_connections: 'Connections',
+      nav_publications: 'Publications',
+      nav_writing: 'Writing',
+      nav_contact: 'Contact',
+      hero_eyebrow: 'Irish Sculptor · 1881–1945',
+      hero_subtitle: 'Royal Hibernian Academician',
+      footer_rights: '© 2026 Mark Freer. All rights reserved.',
+    },
+    ga: {
+      nav_biography: 'Beathaisnéis',
+      nav_works: 'Saothair',
+      nav_gallery: 'Gailearaí',
+      nav_map: 'Léarscáil',
+      nav_family: 'Teaghlach',
+      nav_connections: 'Naisc',
+      nav_publications: 'Foilseacháin',
+      nav_writing: 'Scríbhneoireacht',
+      nav_contact: 'Teagmháil',
+      hero_eyebrow: 'Dealbhóir Éireannach · 1881–1945',
+      hero_subtitle: 'Acadóir Ríoga Hibernach',
+      footer_rights: '© 2026 Mark Freer. Gach ceart ar cosaint.',
+    },
+    fi: {
+      nav_biography: 'Elämäkerta',
+      nav_works: 'Teokset',
+      nav_gallery: 'Galleria',
+      nav_map: 'Kartta',
+      nav_family: 'Perhe',
+      nav_connections: 'Yhteydet',
+      nav_publications: 'Julkaisut',
+      nav_writing: 'Kirjoitukset',
+      nav_contact: 'Yhteystiedot',
+      hero_eyebrow: 'Irlantilainen kuvanveistäjä · 1881–1945',
+      hero_subtitle: 'Kuninkaallinen Hibernian Akatemian jäsen',
+      footer_rights: '© 2026 Mark Freer. Kaikki oikeudet pidätetään.',
+    }
+  };
+
   function applyLang(lang) {
-    var translations = window.AGP_I18N;
-    if (!translations || !translations[lang]) return;
+    if (!translations[lang]) return;
+    localStorage.setItem(STORAGE_KEY, lang);
+    document.documentElement.setAttribute('lang', lang === 'ga' ? 'ga' : lang === 'fi' ? 'fi' : 'en');
     var t = translations[lang];
 
-    localStorage.setItem(STORAGE_KEY, lang);
+    // Nav links
+    var navMap = {
+      'Biography': t.nav_biography,
+      'Beathaisnéis': t.nav_biography,
+      'Elämäkerta': t.nav_biography,
+      'Works': t.nav_works,
+      'Saothair': t.nav_works,
+      'Teokset': t.nav_works,
+      'Gallery': t.nav_gallery,
+      'Gailearaí': t.nav_gallery,
+      'Galleria': t.nav_gallery,
+      'Map': t.nav_map,
+      'Léarscáil': t.nav_map,
+      'Kartta': t.nav_map,
+      'Family': t.nav_family,
+      'Teaghlach': t.nav_family,
+      'Perhe': t.nav_family,
+      'Connections': t.nav_connections,
+      'Naisc': t.nav_connections,
+      'Yhteydet': t.nav_connections,
+      'Publications': t.nav_publications,
+      'Foilseacháin': t.nav_publications,
+      'Julkaisut': t.nav_publications,
+      'Writing': t.nav_writing,
+      'Scríbhneoireacht': t.nav_writing,
+      'Kirjoitukset': t.nav_writing,
+      'Contact': t.nav_contact,
+      'Teagmháil': t.nav_contact,
+      'Yhteystiedot': t.nav_contact,
+    };
 
-    // Set lang attribute on <html> for accessibility + CSS hooks
-    document.documentElement.setAttribute('lang',
-      lang === 'ga' ? 'ga' : lang === 'fi' ? 'fi' : 'en');
-
-    // Update all elements with data-i18n attribute
-    document.querySelectorAll('[data-i18n]').forEach(function (el) {
-      var key = el.getAttribute('data-i18n');
-      if (t[key] !== undefined) {
-        // Use innerHTML for elements that may contain HTML entities
-        // but textContent is safer — our strings are plain text
-        el.textContent = t[key];
-      }
+    document.querySelectorAll('.nav-links > li > a').forEach(function(a) {
+      var txt = a.textContent.trim();
+      if (navMap[txt]) a.textContent = navMap[txt];
     });
 
-    // Update <html lang> and <title> on inner pages
-    var titleEl = document.querySelector('title');
-    if (titleEl) {
-      var baseTitle = titleEl.getAttribute('data-title-base') || titleEl.textContent;
-      if (!titleEl.getAttribute('data-title-base')) {
-        titleEl.setAttribute('data-title-base', baseTitle);
-      }
-      // Append language suffix for non-English
-      if (lang === 'ga') {
-        titleEl.textContent = baseTitle.replace(/ — Albert G\. Power RHA$/, '') + ' — Albert G. Power RHA | Gaeilge';
-      } else if (lang === 'fi') {
-        titleEl.textContent = baseTitle.replace(/ — Albert G\. Power RHA$/, '') + ' — Albert G. Power RHA | Suomi';
-      } else {
-        titleEl.textContent = baseTitle;
-      }
-    }
+    // Hero eyebrow
+    var eyebrow = document.querySelector('.hero-eyebrow');
+    if (eyebrow) eyebrow.textContent = t.hero_eyebrow;
 
-    // Update active button state
-    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+    // Hero subtitle
+    var subtitle = document.querySelector('.hero-subtitle');
+    if (subtitle) subtitle.textContent = t.hero_subtitle;
+
+    // Footer
+    var footer = document.querySelector('.footer-copy');
+    if (footer) footer.textContent = t.footer_rights;
+
+    // Update language button states
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
       btn.classList.toggle('lang-btn--active', btn.dataset.lang === lang);
-      btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang));
     });
   }
 
@@ -134,8 +192,8 @@
     var saved = localStorage.getItem(STORAGE_KEY) || 'en';
     applyLang(saved);
 
-    document.querySelectorAll('.lang-btn').forEach(function (btn) {
-      btn.addEventListener('click', function () {
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
         applyLang(this.dataset.lang);
       });
     });

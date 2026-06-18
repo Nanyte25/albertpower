@@ -28,14 +28,14 @@ layout: default
   <div class="post-nav-inner">
     {% if page.previous.url %}
     <a href="{{ page.previous.url | relative_url }}" class="post-nav-link post-nav-link--prev">
-      <span class="post-nav-label" data-i18n="btn_earlier">← Earlier</span>
+      <span class="post-nav-label">← Earlier</span>
       <span class="post-nav-title">{{ page.previous.title }}</span>
     </a>
     {% endif %}
-    <a href="{{ '/blog/' | relative_url }}" class="btn-secondary" data-i18n="btn_all_posts">All writing</a>
+    <a href="{{ '/blog/' | relative_url }}" class="btn-secondary">All writing</a>
     {% if page.next.url %}
     <a href="{{ page.next.url | relative_url }}" class="post-nav-link post-nav-link--next">
-      <span class="post-nav-label" data-i18n="btn_later">Later →</span>
+      <span class="post-nav-label">Later →</span>
       <span class="post-nav-title">{{ page.next.title }}</span>
     </a>
     {% endif %}

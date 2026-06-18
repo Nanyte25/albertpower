@@ -22,12 +22,12 @@ layout: default
 
     <div class="work-detail-body">
       <dl class="work-meta-list">
-        {% if page.last_modified_at %}<div><dt data-i18n="label_last_updated">Last updated</dt><dd><time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%-d %B %Y" }}</time></dd></div>{% endif %}
-        {% if page.year %}<div><dt data-i18n="label_date">Date</dt><dd>{{ page.year }}</dd></div>{% endif %}
-        {% if page.medium %}<div><dt data-i18n="label_medium">Medium</dt><dd>{{ page.medium }}</dd></div>{% endif %}
-        {% if page.dimensions %}<div><dt data-i18n="label_dimensions">Dimensions</dt><dd>{{ page.dimensions }}</dd></div>{% endif %}
-        {% if page.location %}<div><dt data-i18n="label_location">Location</dt><dd>{{ page.location }}</dd></div>{% endif %}
-        {% if page.collection %}<div><dt data-i18n="label_collection">Collection</dt><dd>{{ page.collection }}</dd></div>{% endif %}
+        {% if page.last_modified_at %}<div><dt>Last updated</dt><dd><time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%-d %B %Y" }}</time></dd></div>{% endif %}
+        {% if page.year %}<div><dt>Date</dt><dd>{{ page.year }}</dd></div>{% endif %}
+        {% if page.medium %}<div><dt>Medium</dt><dd>{{ page.medium }}</dd></div>{% endif %}
+        {% if page.dimensions %}<div><dt>Dimensions</dt><dd>{{ page.dimensions }}</dd></div>{% endif %}
+        {% if page.location %}<div><dt>Location</dt><dd>{{ page.location }}</dd></div>{% endif %}
+        {% if page.collection %}<div><dt>Collection</dt><dd>{{ page.collection }}</dd></div>{% endif %}
       </dl>
 
       <div class="work-detail-text">
@@ -69,6 +69,6 @@ layout: default
 
 <div class="post-nav-row">
   <div class="post-nav-inner">
-    <a href="{{ '/works/' | relative_url }}" class="btn-secondary" data-i18n="btn_all_works">← All works</a>
+    <a href="{{ '/works/' | relative_url }}" class="btn-secondary">← All works</a>
   </div>
 </div>
