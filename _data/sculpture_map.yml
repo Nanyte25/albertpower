@@ -145,10 +145,10 @@
   image: ""
   image_fallback: ""
 
-- name: "Sacred Heart Church, Carndonagh"
+- name: "Christ the King Church, Carndonagh"
   lat: 55.2496971
   lng: -7.2608716
-  works: ["St Patrick (1943–5, granite) — dome", "St Brigid (1943–5, granite) — dome", "St Colmcille (1943–5, granite) — dome", "Statue of the Sacred Heart (1945, stone) — Power's last known commission"]
+  works: ["St Patrick (1943–5, granite) — dome", "St Brigid (1943–5, granite) — dome", "St Colmcille (1943–5, granite) — dome", "Statue of the Sacred Heart (1945, stone)"]
   address: "Chapel Street, Carndonagh, Co. Donegal"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJgfAF5LYBYEgRERUb5g85EvQ"
   image: ""
@@ -214,5 +214,14 @@
   works: ["Seán Mac Diarmada memorial statue (c.1940s, bronze — Power's monument to 1916 signatory)"]
   address: "Kiltyclogher, Co. Leitrim"
   maps_url: "https://www.google.com/maps/search/Kiltyclogher+Leitrim+Sean+MacDiarmada+memorial"
+  image: ""
+  image_fallback: ""
+
+- name: "Christ the King, Gort"
+  lat: 53.0658
+  lng: -8.8181
+  works: ["Christ the King (1932–33, marble) — life-size figure, Market Square, restored 2024"]
+  address: "Market Square, Gort, Co. Galway"
+  maps_url: "https://www.google.com/maps/search/Market+Square+Gort+Galway+Christ+King"
   image: ""
   image_fallback: ""
