@@ -58,7 +58,7 @@
 - name: "Leinster House (Dáil Éireann)"
   lat: 53.3405901
   lng: -6.2539816
-  works: ["Portrait of Thomas Davis (1945) — Power's final work", "Portrait of Tom Clarke (c.1938, bronze)", "Portrait of Austin Stack (1939, bronze)"]
+  works: ["Portrait of Thomas Davis (1945, marble) — Power's final commission", "Portrait of Tom Clarke (c.1938, bronze)", "Portrait of Austin Stack (1939, bronze)"]
   address: "Kildare St, Dublin 2, D02 TK75"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJk8HRHJoOZ0gRkE88yCQIObM"
   image: ""
@@ -67,7 +67,7 @@
 - name: "National Gallery of Ireland"
   lat: 53.3408887
   lng: -6.2522962
-  works: ["Portrait Bust of Michael Collins (1936, bronze)", "Portrait of W.B. Yeats (1939, bronze)", "Death Mask of Austin Stack (1929, plaster)", "Model of Ó Conaire head (1935, plaster)"]
+  works: ["Portrait Bust of Michael Collins (1936, bronze)", "Portrait of W.B. Yeats (1939, bronze)", "Death Mask of Austin Stack (1929, plaster)", "Model of Ó Conaire head (1935, plaster)", "Portrait of Seán Mac Diarmada (1940, bronze)", "Icarus (1936, marble)", "Leenane Connemara Trout (1942, marble)"]
   address: "Merrion Square W, Dublin 2, D02 K303"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJb1ecSpcOZ0gRMQ3w0Qyz_Vg"
   image: "/assets/images/michael-collins-bust.jpg"
@@ -148,7 +148,7 @@
 - name: "Sacred Heart Church, Carndonagh"
   lat: 55.2496971
   lng: -7.2608716
-  works: ["Statue of the Sacred Heart (1945, stone) — Power's last known commission, carved in his Berkeley Road yard"]
+  works: ["St Patrick (1943–5, granite) — dome", "St Brigid (1943–5, granite) — dome", "St Colmcille (1943–5, granite) — dome", "Statue of the Sacred Heart (1945, stone) — Power's last known commission"]
   address: "Chapel Street, Carndonagh, Co. Donegal"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJgfAF5LYBYEgRERUb5g85EvQ"
   image: ""
@@ -187,5 +187,32 @@
   works: ["Memorial to Mary Alicia Trench (d. 1930), 1930s, limestone"]
   address: "Whitechurch, Rathfarnham, Co. Dublin"
   maps_url: "https://www.google.com/maps/search/Whitechurch+Cemetery+Rathfarnham+Dublin"
+  image: ""
+  image_fallback: ""
+
+- name: "St Joseph's College, Garbally, Co. Galway"
+  lat: 53.3317
+  lng: -8.2153
+  works: ["St Joseph and Christ Child (1941, limestone)"]
+  address: "Garbally, Ballinasloe, Co. Galway"
+  maps_url: "https://www.google.com/maps/search/St+Joseph's+College+Garbally+Ballinasloe+Galway"
+  image: ""
+  image_fallback: ""
+
+- name: "Convent of Divine Providence, Foxford"
+  lat: 53.9836
+  lng: -9.1144
+  works: ["St Joseph and Christ Child (late 1920s, marble)"]
+  address: "Foxford, Co. Mayo"
+  maps_url: "https://www.google.com/maps/search/Convent+Divine+Providence+Foxford+Mayo"
+  image: ""
+  image_fallback: ""
+
+- name: "Kiltyclogher, Co. Leitrim"
+  lat: 54.3167
+  lng: -8.0167
+  works: ["Seán Mac Diarmada memorial statue (c.1940s, bronze — Power's monument to 1916 signatory)"]
+  address: "Kiltyclogher, Co. Leitrim"
+  maps_url: "https://www.google.com/maps/search/Kiltyclogher+Leitrim+Sean+MacDiarmada+memorial"
   image: ""
   image_fallback: ""
