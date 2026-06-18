@@ -117,3 +117,48 @@
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJs8y-QfuWW0gRn1qkFnd8rjo"
   image: "/assets/images/o-conaire-memorial.jpg"
   image_fallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Padraic_O_Conaire_statue_Galway.jpg/600px-Padraic_O_Conaire_statue_Galway.jpg"
+
+- name: "St Stephen's Green, Dublin"
+  lat: 53.3369532
+  lng: -6.259999
+  works: ["Thomas Kettle monument (begun 1916, completed c.1937, bronze and limestone)"]
+  address: "St Stephen's Green, Dublin 2"
+  maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJLaxzLpkOZ0gRglayQz8vRKA"
+  image: ""
+  image_fallback: ""
+
+- name: "Emmet Bridge, Harold's Cross"
+  lat: 53.3297164
+  lng: -6.2754994
+  works: ["Plaque to Robert Emmet (1778–1803), 1938, bronze and limestone — inscription carved by Oliver Power"]
+  address: "Clanbrassil Street Upper, Harold's Cross Road, Grand Canal, Dublin"
+  maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJQe50nxkMZ0gRgUgxunSyOpQ"
+  image: ""
+  image_fallback: ""
+
+- name: "Gillooly Hall, Sligo"
+  lat: 54.2695685
+  lng: -8.4795413
+  works: ["Statue of Bishop Laurence Gillooly (1858–1895), 1937, limestone"]
+  address: "Temple Street, Sligo town (formerly Community/Temperance Hall, opposite St Mary's Cathedral)"
+  maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJNTVR4zLoXkgRoG8sCgMDe_8"
+  image: ""
+  image_fallback: ""
+
+- name: "Sacred Heart Church, Carndonagh"
+  lat: 55.2496971
+  lng: -7.2608716
+  works: ["Statue of the Sacred Heart (1945, stone) — Power's last known commission, carved in his Berkeley Road yard"]
+  address: "Chapel Street, Carndonagh, Co. Donegal"
+  maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJgfAF5LYBYEgRERUb5g85EvQ"
+  image: ""
+  image_fallback: ""
+
+- name: "All Hallows College, Dublin"
+  lat: 53.3708985
+  lng: -6.2489963
+  works: ["Madonna and Child (date unconfirmed)"]
+  address: "Grace Park Road, Drumcondra, Dublin, D09 N920"
+  maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJQUJOVGgOZ0gRiC9ZvtbxlYE"
+  image: ""
+  image_fallback: ""
