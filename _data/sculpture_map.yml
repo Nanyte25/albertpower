@@ -81,3 +81,39 @@
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJVdIER5sOZ0gRbNBq2VcIW9Q"
   image: ""
   image_fallback: ""
+
+- name: "Rotunda Hospital"
+  lat: 53.3525394
+  lng: -6.2636423
+  works: ["Portrait of Dr Bethel Solomons (1933, bronze)"]
+  address: "Parnell Square E, Dublin 1, D01 P5W9"
+  maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJ0VEBzIYOZ0gRSW5TtAcfXHI"
+  image: "/assets/images/michael-collins-bust.jpg"
+  image_fallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michael_Collins_1922.jpg/600px-Michael_Collins_1922.jpg"
+
+- name: "Hammam Buildings, O'Connell Street"
+  lat: 53.3508626
+  lng: -6.2597366
+  works: ["Cathal Brugha relief plaque (1935, bronze)"]
+  address: "11–13 O'Connell Street Upper, Dublin, D01 F9C1"
+  maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJhTY_KIQOZ0gRYoWjBq7JrI4"
+  image: "/assets/images/cathal-brugha-death-mask.jpg"
+  image_fallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Cathal_Brugha.jpg/600px-Cathal_Brugha.jpg"
+
+- name: "Liam Lynch Monument, Co. Tipperary"
+  lat: 52.2518536
+  lng: -7.8574451
+  works: ["Liam Lynch Monument — four bronze wolfhounds (1935, with Denis Doyle)"]
+  address: "Knockmealdown Mountains, Newcastle, Clonmel, Co. Tipperary"
+  maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJi4zTKT84Q0gRYD8Z_6PSlfs"
+  image: ""
+  image_fallback: ""
+
+- name: "Galway City Museum"
+  lat: 53.2696822
+  lng: -9.0536151
+  works: ["Pádraic Ó Conaire memorial (1935, Durrow limestone) — displayed here after theft and recovery from Eyre Square"]
+  address: "Spanish Parade, Galway, H91 CX5P"
+  maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJs8y-QfuWW0gRn1qkFnd8rjo"
+  image: "/assets/images/o-conaire-memorial.jpg"
+  image_fallback: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Padraic_O_Conaire_statue_Galway.jpg/600px-Padraic_O_Conaire_statue_Galway.jpg"

@@ -9,6 +9,14 @@
       <li><a href="{{ '/gallery/' | relative_url }}" {% if page.url contains '/gallery/' %}aria-current="page"{% endif %}>Gallery</a></li>
       <li><a href="{{ '/map/' | relative_url }}" {% if page.url contains '/map/' %}aria-current="page"{% endif %}>Map</a></li>
       <li><a href="{{ '/family/' | relative_url }}" {% if page.url contains '/family/' %}aria-current="page"{% endif %}>Family</a></li>
+      <li class="nav-has-dropdown">
+        <a href="{{ '/connections/' | relative_url }}" {% if page.url contains '/connections/' %}aria-current="page"{% endif %}>Connections</a>
+        <ul class="nav-dropdown">
+          <li><a href="{{ '/connections/keating-and-power/' | relative_url }}">Keating &amp; Power</a></li>
+          <li><a href="{{ '/connections/james-power-works/' | relative_url }}">James Power Works</a></li>
+          <li><a href="{{ '/connections/church-works/' | relative_url }}">Church &amp; Religious Works</a></li>
+        </ul>
+      </li>
       <li><a href="{{ '/publications/' | relative_url }}" {% if page.url contains '/publications/' %}aria-current="page"{% endif %}>Publications</a></li>
       <li><a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}aria-current="page"{% endif %}>Writing</a></li>
       <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
