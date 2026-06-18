@@ -21,6 +21,14 @@
       <li><a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}aria-current="page"{% endif %}>Writing</a></li>
       <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
     </ul>
+    <div class="nav-utils">
+      <div class="lang-switcher" aria-label="Language selector">
+        <button class="lang-btn lang-btn--active" data-lang="en" aria-label="English">EN</button>
+        <button class="lang-btn" data-lang="ga" aria-label="Gaeilge">GA</button>
+        <button class="lang-btn" data-lang="fi" aria-label="Suomi">FI</button>
+      </div>
+      <button id="theme-toggle" aria-label="Switch theme">☾</button>
+    </div>
     <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
