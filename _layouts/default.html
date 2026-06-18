@@ -64,17 +64,23 @@
   }
   </script>
   {% endif %}
+  <script>
+  window.AGP_I18N = {
+    en: {
+      {% for item in site.data.i18n.en %}
+      "{{ item[0] }}": {{ item[1] | jsonify }}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    },
+    ga: {
+      {% for item in site.data.i18n.ga %}
+      "{{ item[0] }}": {{ item[1] | jsonify }}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    },
+    fi: {
+      {% for item in site.data.i18n.fi %}
+      "{{ item[0] }}": {{ item[1] | jsonify }}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    }
+  };
+  </script>
 </head>
-<body>
-
-  {% include nav.html %}
-
-  <main>
-    {{ content }}
-  </main>
-
-  {% include footer.html %}
-
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-</body>
-</html>
