@@ -1789,3 +1789,152 @@ body {
   .nav-utils { gap: 0.5rem; }
   .lang-btn { font-size: 0.6rem; padding: 0.15rem 0.3rem; }
 }
+
+/* ── PRINT STYLESHEET ── */
+@media print {
+  /* Hide navigation, interactive elements, and decorative chrome */
+  nav, .site-nav, .nav-bar,
+  .hero-cta, .btn-secondary, .btn-primary,
+  .post-nav-row, .post-nav-inner,
+  .map-container, #map, .leaflet-container,
+  .timeline, .section-label,
+  footer, .site-footer,
+  .lang-switcher, .theme-toggle, .nav-utils,
+  .gallery-grid,
+  script { display: none !important; }
+
+  /* Reset to print-friendly base */
+  *, *::before, *::after {
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #000;
+    background: #fff;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Page header — show cleanly */
+  .page-header {
+    border-bottom: 1pt solid #000;
+    margin-bottom: 1.5rem;
+    padding: 0 0 0.75rem;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .page-title {
+    font-size: 22pt;
+    font-weight: bold;
+    margin: 0 0 4pt;
+  }
+
+  .page-subtitle, .hero-eyebrow {
+    font-size: 10pt;
+    color: #444 !important;
+  }
+
+  /* Work detail — clean two-column layout collapses to single */
+  .work-detail-inner {
+    display: block;
+  }
+
+  .work-detail-image {
+    float: right;
+    width: 45%;
+    margin: 0 0 1rem 1.5rem;
+    page-break-inside: avoid;
+  }
+
+  .work-detail-image img {
+    max-width: 100%;
+    height: auto;
+    border: 0.5pt solid #ccc;
+  }
+
+  .work-detail-image figcaption {
+    font-size: 8pt;
+    color: #555 !important;
+    font-style: italic;
+    margin-top: 4pt;
+  }
+
+  /* Work metadata table */
+  .work-meta-list {
+    border: 0.5pt solid #ccc;
+    padding: 6pt 10pt;
+    margin-bottom: 1rem;
+    break-inside: avoid;
+  }
+
+  .work-meta-list dt {
+    font-weight: bold;
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #444 !important;
+  }
+
+  .work-meta-list dd {
+    font-size: 10pt;
+    margin: 0 0 4pt 0;
+  }
+
+  /* Body text */
+  .work-detail-text p,
+  .post-body p {
+    font-size: 11pt;
+    line-height: 1.65;
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Links — show URL in brackets for print */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #555 !important;
+    word-break: break-all;
+  }
+
+  /* Don't expand internal links */
+  a[href^="/"]::after,
+  a[href^="#"]::after {
+    content: none;
+  }
+
+  /* Source notes */
+  .source-note {
+    border-top: 0.5pt solid #ccc;
+    padding-top: 6pt;
+    margin-top: 1rem;
+    font-size: 9pt;
+    color: #555 !important;
+  }
+
+  /* Page breaks */
+  h2, h3 { page-break-after: avoid; }
+  figure, .work-meta-list { page-break-inside: avoid; }
+
+  /* Print footer with URL and date */
+  @page {
+    margin: 2cm 2.5cm;
+    @bottom-center {
+      content: "albertpower.org — Albert G. Power RHA Archive";
+      font-size: 8pt;
+      color: #888;
+    }
+    @bottom-right {
+      content: counter(page);
+      font-size: 8pt;
+    }
+  }
+}

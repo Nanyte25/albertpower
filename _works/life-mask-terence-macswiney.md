@@ -9,6 +9,7 @@ order: 6
 image: "/assets/images/macswiney-life-mask.jpg"
 image_alt: "Life mask of Terence MacSwiney by Albert G. Power, October 1920"
 image_caption: "Life Mask of Terence MacSwiney, October 1920. Plaster. National Museum of Ireland, Dublin."
+description: "Life mask of Terence MacSwiney by Albert G. Power RHA. MacSwiney, Lord Mayor of Cork, died on hunger strike in Brixton Prison in 1920. Power's mask is a primary record of his physical features."
 ---
 
 Terence MacSwiney, Lord Mayor of Cork and playwright, died on 25 October 1920 after seventy-four days on hunger strike in Brixton Prison, London. His death convulsed Ireland and drew international attention to the independence struggle in a way few single events had managed.

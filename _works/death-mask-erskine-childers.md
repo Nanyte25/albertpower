@@ -9,6 +9,7 @@ order: 5
 image: "/assets/images/erskine-childers.jpg"
 image_alt: "Erskine Childers death mask, Albert G. Power 1922"
 image_caption: "Erskine Childers with James Power. Power Family Archive."
+description: "Death mask of Erskine Childers (1922) by Albert G. Power RHA. Childers, the author and republican activist, was executed on 24 November 1922 during the Irish Civil War."
 ---
 
 Robert Erskine Childers — author, sailor, and passionate Irish republican — was executed by firing squad on 24 November 1922, at Beggars Bush Barracks, Dublin, on the order of the Provisional Government he had opposed. He was forty-two years old. His execution was one of the most controversial acts of the Civil War period, carried out just weeks after the government had introduced emergency powers allowing execution for possession of arms.

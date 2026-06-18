@@ -9,6 +9,7 @@ order: 3
 image: "/assets/images/griffith-death-mask.jpg"
 image_alt: "Death mask of Arthur Griffith by Albert G. Power, August 1922"
 image_caption: "Death Mask of Arthur Griffith, August 1922. Plaster. National Museum of Ireland, Dublin."
+description: "Death mask of Arthur Griffith (1922) by Albert G. Power RHA. Griffith, founder of Sinn Féin and first President of Dáil Éireann, died on 12 August 1922. Power made his mask within days of his death."
 ---
 
 Arthur Griffith, founder of Sinn Féin and first President of Dáil Éireann, died on 12 August 1922 — just ten days before Michael Collins — of a cerebral haemorrhage in a Dublin nursing home. He was fifty years old. Albert Power was again called to make a death mask, producing in the same summer two of the most significant memorial objects of the Irish revolutionary period.

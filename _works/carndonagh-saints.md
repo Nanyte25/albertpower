@@ -7,6 +7,7 @@ collection: "Sacred Heart Church, Carndonagh"
 image_alt: "Granite statues of St Patrick, St Brigid and St Colmcille on dome of Sacred Heart Church, Carndonagh, Co. Donegal"
 image_caption: "Albert Power, St Patrick, St Brigid, and St Colmcille, 1943–5, granite, dome of Sacred Heart Church, Carndonagh, Co. Donegal."
 order: 14
+description: "Granite figures of St Patrick, St Brigid and St Colmcille (1943–1945) by Albert G. Power RHA. Carved for the dome of Sacred Heart Church, Carndonagh, Co. Donegal — among Power's last major commissions before his death in 1945."
 ---
 
 Among Power's last major commissions, the three granite figures of Ireland's patron saints — St Patrick, St Brigid, and St Colmcille — were carved between 1943 and 1945 for the dome of the Sacred Heart Church in Carndonagh, Co. Donegal. Power died in 1945, and this commission represents some of his final work.

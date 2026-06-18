@@ -7,6 +7,7 @@ collection: "Private collection"
 image_alt: "Plaster portrait bust of Éamon de Valera by Albert Power, 1944"
 image_caption: "Albert Power, portrait of Éamon de Valera (1882–1975), 1944, plaster, private collection. Photograph © Síghle Bhreathnach-Lynch."
 order: 11
+description: "Portrait of Éamon de Valera (1944) by Albert G. Power RHA. Plaster, commissioned by solicitor John L. Burke — one of Power's last portrait commissions, made the year before his death."
 ---
 
 In 1944, Power was commissioned by John L. Burke — solicitor, art collector, and close friend of Éamon de Valera — to make a portrait of the Taoiseach and President-elect. The sittings took place at the Department of External Affairs. Burke had a bronze cast made for himself; de Valera received a plaster version.

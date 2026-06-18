@@ -7,6 +7,7 @@ collection: "National Gallery of Ireland"
 image_alt: "Bronze portrait bust of Seán Mac Diarmada, arm raised, 1940"
 image_caption: "Albert Power, portrait Seán Mac Diarmada (1883–1916), 1940, bronze, collection National Gallery of Ireland. Photograph © National Gallery of Ireland."
 order: 8
+description: "Portrait of Seán Mac Diarmada (1940) by Albert G. Power RHA. Bronze, National Gallery of Ireland. A dramatically posed half-figure of the 1916 Rising signatory, executed by the British in Kilmainham Gaol."
 ---
 
 Seán Mac Diarmada (1883–1916) was one of the seven signatories of the 1916 Proclamation and a key organiser of the Irish Volunteers. He was executed by firing squad in Kilmainham Gaol on 12 May 1916.

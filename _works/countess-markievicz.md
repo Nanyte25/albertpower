@@ -9,6 +9,7 @@ order: 8
 image: "/assets/images/countess-markievicz.jpg"
 image_alt: "Portrait bust of Countess Markievicz by Albert G. Power, 1932"
 image_caption: "Portrait Bust of Countess Markievicz, 1932. Bronze. National Museum of Ireland, Dublin."
+description: "Portrait bust of Countess Markievicz (1932) by Albert G. Power RHA. Bronze, National Museum of Ireland — Collins Barracks. A classmate of Power's at the DMSA and Ireland's first female cabinet minister."
 ---
 
 Constance Markievicz — revolutionary, politician, and the first woman elected to the Westminster Parliament — died in 1927. Power made this portrait bust five years after her death, working from photographs and from the recollections of those who had known her. The result captures something of the particular intensity that contemporaries associated with her: a face that looks as though it is about to speak.

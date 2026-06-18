@@ -8,6 +8,7 @@ dimensions: "Slightly under life-size, seated figure"
 image_alt: "Bronze seated figure of Pádraic Ó Conaire, Eyre Square, Galway"
 image_caption: "Pádraic Ó Conaire, 1935. Bronze. Eyre Square, Galway. Photograph: add credit here."
 order: 1
+description: "Bronze memorial to Connacht writer Pádraic Ó Conaire (1935) by Albert G. Power RHA. Unveiled in Eyre Square, Galway — Power's most celebrated public commission and an enduring symbol of Irish cultural identity."
 ---
 
 Power's most celebrated public commission and the work by which he is most widely known. The seated figure of the Connacht writer Pádraic Ó Conaire was unveiled in Eyre Square, Galway, in 1935, and has remained one of the most emotionally resonant objects in Irish public life.

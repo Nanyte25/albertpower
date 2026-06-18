@@ -9,6 +9,7 @@ order: 11
 image: "/assets/images/gresham-hotel-facade.jpg"
 image_alt: "Gresham Hotel decorative facade by Albert G. Power, 1926"
 image_caption: "Gresham Hotel, O'Connell Street, Dublin, 1926. Stone. Urns, Coat of Arms, Iconic Capitals, Six Panels of Festoons of Flowers, Two Sphinxes. Albert G. Power."
+description: "Architectural sculpture for the Gresham Hotel, O'Connell Street, Dublin (1926) by Albert G. Power RHA. Urns, sphinxes, coat of arms and festoons on one of Dublin's most prominent façades."
 ---
 
 The Gresham Hotel commission of 1926 represents one of the most ambitious and publicly visible architectural sculpture projects of Power's career. Tasked with the decorative facade of the newly rebuilt hotel on O'Connell Street — Dublin's principal thoroughfare, still bearing the scars of the 1916 Rising and the Civil War — Power produced an extraordinary programme of carved ornament.

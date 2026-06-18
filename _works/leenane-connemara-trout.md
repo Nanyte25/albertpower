@@ -7,6 +7,7 @@ collection: "National Gallery of Ireland"
 image_alt: "Marble sculpture of a trout by Albert Power, 1942"
 image_caption: "Albert Power, Leenane Connemara Trout, 1942, marble, collection National Gallery of Ireland. Photograph © National Gallery of Ireland."
 order: 10
+description: "Leenane Connemara Trout (1942) by Albert G. Power RHA. Marble, National Gallery of Ireland. A naturalistic animal study in Irish stone, expressing Power's deep connection to the west of Ireland."
 ---
 
 Carved in 1942, *Leenane Connemara Trout* is one of Power's most distinctive works — a naturalistic animal study in marble that sits apart from the commemorative and religious commissions that dominated his output. The subject, a Connemara trout, is rendered with close attention to the creature's physical form, scales, and texture, carved from Irish stone.

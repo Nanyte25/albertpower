@@ -10,6 +10,7 @@ image: "/assets/images/collins-death-mask.jpg"
 image_side: "/assets/images/collins-death-mask-side.jpg"
 image_alt: "Death mask of Michael Collins by Albert G. Power, 1922"
 image_caption: "Death Mask of Michael Collins, 22 August 1922. Plaster. National Museum of Ireland — Collins Barracks, Dublin. Also held at Cathal Brugha Barracks Visitors Centre."
+description: "Death mask of Michael Collins made by Albert G. Power RHA on 22 August 1922, hours after Collins was killed at Béal na Bláth. The most accurate physical record of Collins's face in existence, now held at the National Museum of Ireland."
 ---
 
 On 22 August 1922, Michael Collins was killed at Béal na Bláth, County Cork. He was thirty-one years old. Within hours of his body being brought to Dublin, Albert Power was called to take a death mask — pressing plaster directly to the face of the deceased to preserve an exact record of his features in the moments after death.

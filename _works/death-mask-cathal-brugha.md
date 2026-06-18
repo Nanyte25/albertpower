@@ -9,6 +9,7 @@ order: 4
 image: "/assets/images/cathal-brugha-death-mask.jpg"
 image_alt: "Death mask of Cathal Brugha by Albert G. Power, April 1922"
 image_caption: "Death Mask of Cathal Brugha, July 1922. Plaster. Cathal Brugha Barracks, Dublin."
+description: "Death mask of Cathal Brugha (1922) by Albert G. Power RHA. Made shortly after Brugha's death during the Irish Civil War — one of four revolutionary death masks Power created in the summer of 1922."
 ---
 
 Cathal Brugha — born Charles William St John Burgess — was one of the most uncompromising figures of the Irish independence movement. Chief of Staff of the Irish Volunteers, Minister for Defence in the First Dáil, he opposed the Anglo-Irish Treaty absolutely and was mortally wounded on O'Connell Street on 5 July 1922, two days after the outbreak of the Civil War, dying the following day.

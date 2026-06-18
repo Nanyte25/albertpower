@@ -9,6 +9,7 @@ order: 12
 image: "/assets/images/figure-of-science-1911.jpg"
 image_alt: "Figure of Science, Government Buildings Dublin, Albert G. Power 1911"
 image_caption: "Figure of Science, 1911. Stone. College of Science (now Government Buildings), Merrion Street, Dublin."
+description: "Figure of Science, Government Buildings, Merrion Street, Dublin (1911) by Albert G. Power RHA. One of Power's earliest major architectural commissions — a full-length figure on the façade of the seat of Irish government."
 ---
 
 Among the earliest of Power's major public commissions, the Figure of Science was carved for the College of Science on Merrion Street — the building that would later become Government Buildings, seat of the Irish government. Made in 1911, before the Rising, before the War of Independence, before the Civil War that would define so much of Power's subsequent work, it represents his emergence as a sculptor capable of monumental public commissions.

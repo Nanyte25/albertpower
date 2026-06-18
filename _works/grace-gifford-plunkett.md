@@ -9,6 +9,7 @@ order: 10
 image: "/assets/images/grace-gifford-plunkett.jpg"
 image_alt: "Portrait of Grace Gifford Plunkett by Albert G. Power"
 image_caption: "Portrait of Grace Gifford Plunkett. Bronze. National Museum of Ireland, Dublin."
+description: "Portrait of Grace Gifford Plunkett by Albert G. Power RHA. Grace Gifford married Joseph Mary Plunkett hours before his execution in 1916 — a fellow student of Power's at the Dublin Metropolitan School of Art."
 ---
 
 Grace Gifford married Joseph Mary Plunkett in Kilmainham Gaol on the night before his execution on 4 May 1916 — one of the most extraordinary and heartbreaking episodes of the Rising. She became one of the most significant figures of the commemorative culture of the independence period, an artist herself who devoted much of her later life to the memory of her husband and the cause he died for.

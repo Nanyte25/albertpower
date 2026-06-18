@@ -16,6 +16,54 @@
 
   {% seo %}
   {% feed_meta %}
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Albert George Power",
+    "alternateName": "Albert G. Power RHA",
+    "birthDate": "1881",
+    "deathDate": "1945",
+    "nationality": "Irish",
+    "jobTitle": "Sculptor",
+    "description": "Albert George Power RHA (1881–1945) was one of the foremost Irish sculptors of the twentieth century, known for his death masks of revolutionary leaders, public monuments, and ecclesiastical commissions across Ireland.",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Albert_Power_(sculptor)",
+      "https://www.nationalgallery.ie/art-and-artists/highlights-collection/portrait-bust-michael-collins-albert-power"
+    ],
+    "url": "{{ site.url }}"
+  }
+  </script>
+  {% endif %}
+  {% if page.layout == "work" or page.layout == "post" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "{{ site.url }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{% if page.layout == 'work' %}Works{% else %}Writing{% endif %}",
+        "item": "{{ site.url }}{% if page.layout == 'work' %}/works/{% else %}/blog/{% endif %}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{ page.title | escape }}",
+        "item": "{{ page.url | absolute_url }}"
+      }
+    ]
+  }
+  </script>
+  {% endif %}
 </head>
 <body>
 
