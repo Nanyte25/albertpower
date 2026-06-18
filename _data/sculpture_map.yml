@@ -49,7 +49,7 @@
 - name: "Glasnevin Cemetery"
   lat: 53.3697293
   lng: -6.2773294
-  works: ["Albert Power Monument", "Downes Monument (1925)", "Archbishop Walsh Tomb (1929)", "Cait O'Kelly Memorial (1936)", "McKernan Memorial (1937, 1940)"]
+  works: ["Albert Power Monument", "Downes Monument (1925)", "Archbishop Walsh Tomb (1929)", "Cait O'Kelly Memorial (1936)", "McKernan Memorial — John and Mary McKernan (c.1940, limestone)", "Memorial — Mary Alicia Trench (1930s, limestone) — see Whitechurch Cemetery"]
   address: "Finglas Rd, Glasnevin, Dublin, D11 XA32"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJTf7MoOGZXUgRwg549JX1Nu0"
   image: ""
@@ -178,5 +178,14 @@
   works: ["Statue of St Patrick, 1939, Portland stone — with hidden goat's head at base referencing local 'Skerry Goats' legend"]
   address: "Strand Street, Skerries, Co. Dublin"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJm2lz-agYZ0gRYKzwoMGgUro"
+  image: ""
+  image_fallback: ""
+
+- name: "Whitechurch Cemetery, Dublin"
+  lat: 53.2705
+  lng: -6.2924
+  works: ["Memorial to Mary Alicia Trench (d. 1930), 1930s, limestone"]
+  address: "Whitechurch, Rathfarnham, Co. Dublin"
+  maps_url: "https://www.google.com/maps/search/Whitechurch+Cemetery+Rathfarnham+Dublin"
   image: ""
   image_fallback: ""
