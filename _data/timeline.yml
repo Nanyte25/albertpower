@@ -3,7 +3,7 @@
   title_ga: "Rugadh i mBaile Átha Cliath"
   title_fi: "Syntyi Dublinissa"
   description: "Albert George Power is born in the city that will define his artistic life, in the final decades of Victorian Ireland."
-  image: "https://catholicarchives.ie/uploads/r/irish-capuchin-archives-2/d/9/2/d92e752038c424dec0f476ea3180864af99d1f3d4e1dc5d2ce313882b768096a/CA_CP-3-16-8-20-1.jpg"
+  image: "/assets/images/albert-power-portrait.jpg"
   image_caption: "Albert G. Power. Irish Capuchin Archives."
 
 - year: "1898"
@@ -19,7 +19,7 @@
   title_ga: "Scoil Ealaíne Mheitreapóil Bhaile Átha Cliath"
   title_fi: "Dublinin taidekoulu"
   description: "Studies under John Hughes and Oliver Sheppard. Classmates include Kathleen Fox, Willie Pearse, Grace Gifford, and Countess Markievicz."
-  image: "https://catholicarchives.ie/uploads/r/irish-capuchin-archives-2/b/9/c/b9cc9845d5323040e8aaf6588ec45a737cfaab42af8f406e8aff59b0289f1b07/CA_CP-3-16-8-20-4.jpg"
+  image: "/assets/images/dmsa-friends-1900s.jpg"
   image_caption: "Albert Power at work. Irish Capuchin Archives."
 
 - year: "1909"
@@ -43,8 +43,8 @@
   title_ga: "Toghadh ina bhall den RHA"
   title_fi: "Valittiin RHA:n jäseneksi"
   description: "Elected full member of the Royal Hibernian Academy, cementing his standing as one of Ireland's foremost sculptors."
-  image: "https://catholicarchives.ie/uploads/r/irish-capuchin-archives-2/b/e/7/be78de9163f20ec1ad49fcb36816d165a41758a8b206f92deb835bf7bad2199f/CA_CP-3-16-8-20-5.jpg"
-  image_caption: "Albert Power at an exhibition. Irish Capuchin Archives."
+  image: "/assets/images/albert-power-portrait.jpg"
+  image_caption: "Albert G. Power RHA, 1881–1945."
 
 - year: "1922"
   title: "The Death Mask Summer"
@@ -99,5 +99,5 @@
   title_ga: "Bás i mBaile Átha Cliath"
   title_fi: "Kuolema Dublinissa"
   description: "Power dies in July 1945. His final work — the Sacred Heart for Carndonagh church, Co. Donegal — was photographed in progress in his Berkeley Road yard. The Irish Press calls him 'one of our greatest sculptors.'"
-  image: "https://catholicarchives.ie/uploads/r/irish-capuchin-archives-2/b/9/c/b9cc9845d5323040e8aaf6588ec45a737cfaab42af8f406e8aff59b0289f1b07/CA_CP-3-16-8-20-4.jpg"
+  image: "/assets/images/dmsa-friends-1900s.jpg"
   image_caption: "Albert Power at work. Irish Capuchin Archives."
