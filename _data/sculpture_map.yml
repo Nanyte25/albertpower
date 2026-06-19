@@ -288,3 +288,12 @@
   maps_url: "https://www.google.com/maps/search/St+Stephen's+Green+Dublin"
   image: "/assets/images/haslam-seat-1925.jpg"
   image_fallback: ""
+
+- name: "Bohermore Cemetery, Galway"
+  lat: 53.2796
+  lng: -9.0473
+  works: ["Headstone for Padraic O Conaire's grave (c.1945-55, James Power)"]
+  address: "Bohermore, Galway"
+  maps_url: "https://www.google.com/maps/search/Bohermore+Cemetery+Galway"
+  image: ""
+  image_fallback: ""
