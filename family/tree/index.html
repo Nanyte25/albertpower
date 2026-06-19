@@ -19,97 +19,140 @@ permalink: /family/tree/
     <div class="connection-intro">
       <p>This tree traces the direct line from Albert George Power RHA through his
       son Oliver and on to the present generation, alongside Albert's other three
-      sculptor children. Genealogy reconstructed from birth, marriage and death
-      records, and contemporary obituaries, held in the family archive.</p>
+      sculptor children. Click any name to read more. Genealogy reconstructed from
+      birth, marriage and death records, and contemporary obituaries, held in the
+      family archive.</p>
     </div>
 
     <div class="celtic-rule"></div>
 
-    <div class="ftree">
+    <style>
+      .pt-wrap { --pt-line: rgba(139,115,85,0.45); --pt-bg: #f7f2e8; --pt-ink: #1c1a17; --pt-muted: #6b5e4e; --pt-accent: #4a6741; --pt-card: #ffffff; --pt-border: rgba(139,115,85,0.3); font-family: Georgia, 'Source Serif 4', serif; padding: 1rem 0 3rem; overflow-x: auto; }
+      @media (prefers-color-scheme: dark) { .pt-wrap { --pt-line: rgba(196,168,130,0.4); --pt-bg: #1a1714; --pt-ink: #f0ebe0; --pt-muted: #a99a86; --pt-accent: #7aae6e; --pt-card: #232019; --pt-border: rgba(196,168,130,0.25); } }
+      .pt-level { display: flex; justify-content: center; align-items: flex-start; gap: 28px; position: relative; padding-bottom: 36px; flex-wrap: wrap; }
+      .pt-connector { width: 100%; display: flex; justify-content: center; }
+      .pt-connector svg { display: block; }
+      .pt-card { display: flex; flex-direction: column; align-items: center; width: 128px; text-decoration: none; color: var(--pt-ink); flex-shrink: 0; transition: transform 0.15s ease; }
+      .pt-card:hover { transform: translateY(-3px); }
+      .pt-card.is-root .pt-photo { width: 96px; height: 96px; }
+      .pt-card.is-link .pt-photo { box-shadow: 0 0 0 2px var(--pt-bg), 0 0 0 3px var(--pt-accent); }
+      .pt-card.is-final .pt-photo { box-shadow: 0 0 0 2px var(--pt-bg), 0 0 0 3px var(--pt-muted); }
+      .pt-photo { width: 76px; height: 76px; border-radius: 50%; overflow: hidden; background: var(--pt-card); border: 1px solid var(--pt-border); display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+      .pt-photo img { width: 100%; height: 100%; object-fit: cover; }
+      .pt-photo.is-pending { border-style: dashed; }
+      .pt-photo.is-pending span { font-size: 1.4rem; color: var(--pt-muted); opacity: 0.7; }
+      .pt-name { font-weight: 700; font-size: 0.92rem; line-height: 1.25; text-align: center; margin: 0; }
+      .pt-card.is-root .pt-name { font-size: 1.05rem; }
+      .pt-dates { font-size: 0.74rem; color: var(--pt-muted); margin: 2px 0 0; text-align: center; }
+      .pt-marriage { font-size: 0.7rem; font-style: italic; color: var(--pt-muted); margin: 1px 0 0; text-align: center; }
+      .pt-hint { font-size: 0.66rem; color: var(--pt-accent); margin-top: 3px; opacity: 0; transition: opacity 0.15s; }
+      .pt-card.is-link:hover .pt-hint { opacity: 1; }
+      @media (max-width: 700px) {
+        .pt-level { gap: 14px; }
+        .pt-card { width: 92px; }
+        .pt-photo { width: 60px; height: 60px; }
+        .pt-card.is-root .pt-photo { width: 78px; height: 78px; }
+        .pt-name { font-size: 0.78rem; }
+      }
+    </style>
 
-      <div class="ftree-row ftree-row--root">
-        <div class="ftree-node ftree-node--root">
-          <div class="ftree-oval">
+    <div class="pt-wrap">
+
+      <div class="pt-level" style="padding-bottom:0;">
+        <a href="{{ '/' | relative_url }}" class="pt-card is-root is-link">
+          <div class="pt-photo">
             <img src="{{ '/assets/images/albert-power-portrait.jpg' | relative_url }}" alt="Albert George Power RHA" loading="lazy" />
           </div>
-          <p class="ftree-name">Albert George Power <span>RHA</span></p>
-          <p class="ftree-meta">1881 – 1945</p>
-          <p class="ftree-meta ftree-meta--sub">m. Agnes Kelly, 1903</p>
-        </div>
+          <p class="pt-name">Albert George Power <span style="font-size:0.7em;color:var(--pt-accent);">RHA</span></p>
+          <p class="pt-dates">1881 – 1945</p>
+          <p class="pt-marriage">m. Agnes Kelly, 1903</p>
+          <span class="pt-hint">View archive →</span>
+        </a>
       </div>
 
-      <div class="ftree-trunk" aria-hidden="true"></div>
+      <div class="pt-connector" aria-hidden="true">
+        <svg width="640" height="48" viewBox="0 0 640 48">
+          <line x1="320" y1="0" x2="320" y2="20" stroke="var(--pt-line)" stroke-width="1.5" />
+          <line x1="64" y1="20" x2="576" y2="20" stroke="var(--pt-line)" stroke-width="1.5" />
+          <line x1="64" y1="20" x2="64" y2="48" stroke="var(--pt-line)" stroke-width="1.5" />
+          <line x1="234" y1="20" x2="234" y2="48" stroke="var(--pt-line)" stroke-width="1.5" />
+          <line x1="406" y1="20" x2="406" y2="48" stroke="var(--pt-line)" stroke-width="1.5" />
+          <line x1="576" y1="20" x2="576" y2="48" stroke="var(--pt-line)" stroke-width="1.5" />
+        </svg>
+      </div>
 
-      <div class="ftree-row ftree-row--children">
-        <div class="ftree-branch" aria-hidden="true"></div>
-
-        <div class="ftree-node">
-          <div class="ftree-oval ftree-oval--sm">
+      <div class="pt-level">
+        <a href="{{ '/family/may-power/' | relative_url }}" class="pt-card is-link">
+          <div class="pt-photo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/May_Power.jpg/250px-May_Power.jpg" alt="May Power" loading="lazy" />
           </div>
-          <p class="ftree-name">May Power</p>
-          <p class="ftree-meta">b. 1903</p>
-          <a href="{{ '/family/may-power/' | relative_url }}" class="ftree-link">Read more →</a>
-        </div>
+          <p class="pt-name">May Power</p>
+          <p class="pt-dates">b. 1903</p>
+          <span class="pt-hint">Read more →</span>
+        </a>
 
-        <div class="ftree-node">
-          <div class="ftree-oval ftree-oval--sm">
+        <a href="{{ '/family/albert-power-jr/' | relative_url }}" class="pt-card is-link">
+          <div class="pt-photo">
             <img src="{{ '/assets/images/albert-jr-power.jpg' | relative_url }}" alt="Albert Power Jr." loading="lazy" />
           </div>
-          <p class="ftree-name">Albert Power Jr.</p>
-          <p class="ftree-meta">1912 – 1973</p>
-          <a href="{{ '/family/albert-power-jr/' | relative_url }}" class="ftree-link">Read more →</a>
-        </div>
+          <p class="pt-name">Albert Power Jr.</p>
+          <p class="pt-dates">1912 – 1973</p>
+          <span class="pt-hint">Read more →</span>
+        </a>
 
-        <div class="ftree-node ftree-node--lineage">
-          <div class="ftree-oval ftree-oval--lineage">
+        <a href="{{ '/family/oliver-power/' | relative_url }}" class="pt-card is-link is-lineage">
+          <div class="pt-photo">
             <img src="{{ '/assets/images/oliver-power.jpg' | relative_url }}" alt="Oliver Power" loading="lazy" />
           </div>
-          <p class="ftree-name">Oliver Power</p>
-          <p class="ftree-meta">b. 1913</p>
-          <p class="ftree-meta ftree-meta--sub">m. Sheila Keating, 1939</p>
-          <a href="{{ '/family/oliver-power/' | relative_url }}" class="ftree-link">Read more →</a>
-        </div>
+          <p class="pt-name">Oliver Power</p>
+          <p class="pt-dates">b. 1913</p>
+          <p class="pt-marriage">m. Sheila Keating, 1939</p>
+          <span class="pt-hint">Read more →</span>
+        </a>
 
-        <div class="ftree-node">
-          <div class="ftree-oval ftree-oval--sm">
+        <a href="{{ '/family/james-power/' | relative_url }}" class="pt-card is-link">
+          <div class="pt-photo">
             <img src="{{ '/assets/images/james-power.jpg' | relative_url }}" alt="James Power" loading="lazy" />
           </div>
-          <p class="ftree-name">James Power</p>
-          <p class="ftree-meta">d. 2009</p>
-          <a href="{{ '/family/james-power/' | relative_url }}" class="ftree-link">Read more →</a>
-        </div>
+          <p class="pt-name">James Power</p>
+          <p class="pt-dates">d. 2009</p>
+          <span class="pt-hint">Read more →</span>
+        </a>
 
-        <div class="ftree-node">
-          <div class="ftree-oval ftree-oval--sm ftree-oval--pending">
-            <span>?</span>
-          </div>
-          <p class="ftree-name">Christopher Noel</p>
-          <p class="ftree-meta">d. 2016</p>
+        <div class="pt-card">
+          <div class="pt-photo is-pending"><span>?</span></div>
+          <p class="pt-name">Christopher Noel</p>
+          <p class="pt-dates">d. 2016</p>
         </div>
       </div>
 
-      <div class="ftree-trunk ftree-trunk--lineage" aria-hidden="true"></div>
+      <div class="pt-connector" aria-hidden="true">
+        <svg width="640" height="48" viewBox="0 0 640 48">
+          <line x1="234" y1="0" x2="234" y2="48" stroke="var(--pt-line)" stroke-width="1.5" />
+        </svg>
+      </div>
 
-      <div class="ftree-row ftree-row--lineage">
-        <div class="ftree-node ftree-node--lineage">
-          <div class="ftree-oval ftree-oval--lineage ftree-oval--pending">
-            <span>?</span>
-          </div>
-          <p class="ftree-name">Marie Power</p>
-          <p class="ftree-meta">m. Patrick Freer</p>
+      <div class="pt-level" style="padding-bottom:0;">
+        <div class="pt-card is-lineage">
+          <div class="pt-photo is-pending"><span>?</span></div>
+          <p class="pt-name">Marie Power</p>
+          <p class="pt-marriage">m. Patrick Freer</p>
         </div>
       </div>
 
-      <div class="ftree-trunk ftree-trunk--lineage" aria-hidden="true"></div>
+      <div class="pt-connector" aria-hidden="true">
+        <svg width="640" height="48" viewBox="0 0 640 48">
+          <line x1="320" y1="0" x2="320" y2="48" stroke="var(--pt-line)" stroke-width="1.5" />
+        </svg>
+      </div>
 
-      <div class="ftree-row ftree-row--lineage">
-        <div class="ftree-node ftree-node--lineage ftree-node--final">
-          <div class="ftree-oval ftree-oval--lineage">
+      <div class="pt-level" style="padding-bottom:0;">
+        <div class="pt-card is-final">
+          <div class="pt-photo">
             <img src="https://avatars.githubusercontent.com/u/9899691?v=4" alt="Mark Freer" loading="lazy" />
           </div>
-          <p class="ftree-name">Mark Freer</p>
-          <p class="ftree-meta">Creator of this archive</p>
+          <p class="pt-name">Mark Freer</p>
+          <p class="pt-dates">Creator of this archive</p>
         </div>
       </div>
 
