@@ -49,10 +49,10 @@
 - name: "Glasnevin Cemetery"
   lat: 53.3697293
   lng: -6.2773294
-  works: ["Albert Power Monument", "Downes Monument (1925)", "Archbishop Walsh Tomb (1929)", "Cait O'Kelly Memorial (1936)", "McKernan Memorial — John and Mary McKernan (c.1940, limestone)", "Memorial — Mary Alicia Trench (1930s, limestone) — see Whitechurch Cemetery"]
+  works: ["Archbishop Walsh Memorial (1926-29, figure & sarcophagus, with arch. J.J. Robinson)", "Downes Monument (1925)", "Lardner Monument (1925)", "Cait O'Kelly Memorial (1936)", "McKernan Memorial — John and Mary McKernan (c.1940, limestone)", "Young Irelanders Monument design (1938, wolfhounds designed but never cast)", "Power himself buried here (d. 1945)"]
   address: "Finglas Rd, Glasnevin, Dublin, D11 XA32"
   maps_url: "https://www.google.com/maps/place/?q=place_id:ChIJTf7MoOGZXUgRwg549JX1Nu0"
-  image: ""
+  image: "/assets/images/archbishop-walsh-memorial.jpg"
   image_fallback: ""
 
 - name: "Leinster House (Dáil Éireann)"
@@ -226,11 +226,65 @@
   image: ""
   image_fallback: ""
 
-- name: "Cathedral of Christ the King, Mullingar"
-  lat: 53.5261
-  lng: -7.3381
-  works: ["Portland stone tympanum, main entrance (1930s) — commission followed the Archbishop Walsh Memorial at Glasnevin"]
-  address: "Cathedral of Christ the King, Mullingar, Co. Westmeath"
-  maps_url: "https://www.google.com/maps/search/Cathedral+Christ+King+Mullingar+Westmeath"
-  image: ""
+- name: "St Peter's Church, Drogheda"
+  lat: 53.7178
+  lng: -6.3478
+  works: ["Bust of the Venerable Oliver Plunkett (1921, limestone)", "Shrine of St Oliver Plunkett's head (relic, not by Power)"]
+  address: "St Peter's Church, William Street, Drogheda, Co. Louth"
+  maps_url: "https://www.google.com/maps/search/St+Peter's+Church+Drogheda+Louth"
+  image: "/assets/images/oliver-plunkett-drogheda.jpg"
+  image_fallback: ""
+
+- name: "Royal Bank of Ireland, O'Connell Street"
+  lat: 53.3506
+  lng: -6.2603
+  works: ["Decorative stonework — Medusa head, lion heads, animal heads (1919)"]
+  address: "O'Connell Street, Dublin"
+  maps_url: "https://www.google.com/maps/search/O'Connell+Street+Dublin"
+  image: "/assets/images/royal-bank-ireland-1919.jpg"
+  image_fallback: ""
+
+- name: "Munster & Leinster Bank, O'Connell Street"
+  lat: 53.3498
+  lng: -6.2600
+  works: ["Keystone frieze with classical female heads (1917)"]
+  address: "O'Connell Street, Dublin"
+  maps_url: "https://www.google.com/maps/search/O'Connell+Street+Dublin"
+  image: "/assets/images/munster-leinster-bank-1917.jpg"
+  image_fallback: ""
+
+- name: "Wynn's Hotel"
+  lat: 53.3489
+  lng: -6.2596
+  works: ["Decorative capitals and pilasters (1925)"]
+  address: "Lower Abbey Street, Dublin"
+  maps_url: "https://www.google.com/maps/search/Wynn's+Hotel+Abbey+Street+Dublin"
+  image: "/assets/images/wynns-hotel-1925.jpg"
+  image_fallback: ""
+
+- name: "St Catherine's Church, Meath Street"
+  lat: 53.3392
+  lng: -6.2783
+  works: ["Altar and reredos, with Jack Morrow (1920)"]
+  address: "Meath Street, Dublin 8"
+  maps_url: "https://www.google.com/maps/search/St+Catherine's+Church+Meath+Street+Dublin"
+  image: "/assets/images/st-catherines-altar-1920.jpg"
+  image_fallback: ""
+
+- name: "Sarsfield Memorial, Limerick"
+  lat: 52.6638
+  lng: -8.6267
+  works: ["Bronze statue of Tom Clarke (1938-47, completed by his sons 1948)"]
+  address: "Sarsfield Memorial, Limerick"
+  maps_url: "https://www.google.com/maps/search/Sarsfield+Memorial+Limerick"
+  image: "/assets/images/tom-clarke-sarsfield-limerick.jpg"
+  image_fallback: ""
+
+- name: "St Stephen's Green — Kettle Memorial & Haslam Seat"
+  lat: 53.3382
+  lng: -6.2592
+  works: ["Thomas Kettle Memorial (1921)", "Haslam Seat (1925)"]
+  address: "St Stephen's Green, Dublin 2"
+  maps_url: "https://www.google.com/maps/search/St+Stephen's+Green+Dublin"
+  image: "/assets/images/haslam-seat-1925.jpg"
   image_fallback: ""
