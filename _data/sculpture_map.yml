@@ -297,3 +297,12 @@
   maps_url: "https://www.google.com/maps/search/Bohermore+Cemetery+Galway"
   image: ""
   image_fallback: ""
+
+- name: "National Concert Hall, Earlsfort Terrace"
+  lat: 53.3331
+  lng: -6.2589
+  works: ["Fourteen carved heads of notable figures, upper facade (1914)"]
+  address: "Earlsfort Terrace, Dublin 2"
+  maps_url: "https://www.google.com/maps/search/National+Concert+Hall+Earlsfort+Terrace+Dublin"
+  image: "/assets/images/ncha-facade-1914.jpg"
+  image_fallback: ""
