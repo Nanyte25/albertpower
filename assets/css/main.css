@@ -1968,3 +1968,191 @@ body {
     background: rgba(255,255,255,0.03);
   }
 }
+
+/* ── Family Tree ── */
+.ftree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.ftree-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.ftree-row--children {
+  position: relative;
+  gap: 1.75rem;
+}
+
+.ftree-row--lineage {
+  gap: 0;
+}
+
+.ftree-trunk {
+  width: 1px;
+  height: 48px;
+  background: var(--bronze);
+  opacity: 0.5;
+}
+
+.ftree-trunk--lineage {
+  height: 56px;
+}
+
+.ftree-branch {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  border-top: 1px solid var(--bronze);
+  opacity: 0.35;
+}
+
+.ftree-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.ftree-node--root {
+  width: 220px;
+}
+
+.ftree-node--lineage {
+  width: 220px;
+}
+
+.ftree-node--final .ftree-oval {
+  box-shadow: 0 0 0 3px var(--moss);
+}
+
+.ftree-oval {
+  width: 110px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--stone);
+  border: 2px solid var(--bronze);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ftree-node--root .ftree-oval {
+  width: 150px;
+  height: 190px;
+  border-width: 3px;
+}
+
+.ftree-oval--lineage {
+  width: 130px;
+  height: 165px;
+  border-width: 2.5px;
+}
+
+.ftree-oval--sm {
+  width: 92px;
+  height: 118px;
+}
+
+.ftree-oval img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ftree-oval--pending {
+  background: var(--vellum);
+  border-style: dashed;
+}
+
+.ftree-oval--pending span {
+  font-family: var(--ff-display);
+  font-size: 2rem;
+  color: var(--bronze);
+  opacity: 0.6;
+}
+
+.ftree-name {
+  font-family: var(--ff-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.15rem;
+}
+
+.ftree-node--root .ftree-name {
+  font-size: 1.3rem;
+}
+
+.ftree-name span {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--bronze);
+  vertical-align: super;
+}
+
+.ftree-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.ftree-meta--sub {
+  font-style: italic;
+  margin-top: 0.1rem;
+}
+
+.ftree-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  font-family: var(--ff-display);
+  color: var(--moss);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.ftree-link:hover {
+  border-color: var(--moss);
+}
+
+@media (max-width: 800px) {
+  .ftree-row--children {
+    gap: 1.25rem;
+  }
+  .ftree-node {
+    width: 120px;
+  }
+  .ftree-oval--sm {
+    width: 78px;
+    height: 100px;
+  }
+  .ftree-branch {
+    display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .ftree-row--children {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .ftree-node {
+    width: 160px;
+  }
+}
