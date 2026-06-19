@@ -1938,3 +1938,33 @@ body {
     }
   }
 }
+
+/* ── Honest "photograph pending" placeholder ── */
+.museum-work-image--pending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo-pending-box {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper, #f1ede3);
+  border: 1px dashed var(--bronze, #8b7355);
+  border-radius: 4px;
+}
+.photo-pending-box span {
+  font-family: var(--ff-display, serif);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted, #888);
+}
+@media (prefers-color-scheme: dark) {
+  .photo-pending-box {
+    background: rgba(255,255,255,0.03);
+  }
+}
