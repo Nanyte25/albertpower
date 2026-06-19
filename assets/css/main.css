@@ -1969,6 +1969,61 @@ body {
   }
 }
 
+/* ── Honest "unverified / needs research" note ── */
+.research-note {
+  border: 1px dashed var(--bronze, #8b7355);
+  border-radius: 4px;
+  background: var(--paper, #f1ede3);
+  padding: 0.9rem 1.1rem;
+  margin: 1.25rem 0;
+}
+.research-note p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-muted, #6B5E4E);
+}
+.research-note p + p { margin-top: 0.5rem; }
+.research-note strong {
+  font-family: var(--ff-display, serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bronze, #8b7355);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+@media (prefers-color-scheme: dark) {
+  .research-note { background: rgba(255,255,255,0.03); }
+}
+
+/* ── Inline portrait figure within profile body text ── */
+.body-inline-figure {
+  float: right;
+  width: 200px;
+  margin: 0 0 1rem 1.5rem;
+}
+.body-inline-figure img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+.body-inline-figure figcaption {
+  font-family: var(--ff-display, serif);
+  font-size: 0.78rem;
+  color: var(--text-muted, #6B5E4E);
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+.body-inline-figure figcaption a { color: var(--bronze, #8b7355); }
+@media (max-width: 640px) {
+  .body-inline-figure {
+    float: none;
+    width: 160px;
+    margin: 0 auto 1rem;
+  }
+}
+
 /* ── Family Tree ── */
 .ftree {
   display: flex;
