@@ -225,3 +225,12 @@
   maps_url: "https://www.google.com/maps/search/Market+Square+Gort+Galway+Christ+King"
   image: ""
   image_fallback: ""
+
+- name: "Cathedral of Christ the King, Mullingar"
+  lat: 53.5261
+  lng: -7.3381
+  works: ["Portland stone tympanum, main entrance (1930s) — commission followed the Archbishop Walsh Memorial at Glasnevin"]
+  address: "Cathedral of Christ the King, Mullingar, Co. Westmeath"
+  maps_url: "https://www.google.com/maps/search/Cathedral+Christ+King+Mullingar+Westmeath"
+  image: ""
+  image_fallback: ""
