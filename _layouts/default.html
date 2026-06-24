@@ -76,5 +76,8 @@
   {% include footer.html %}
 
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  {% if page.url == '/gallery/' %}
+  <script src="{{ '/assets/js/gallery-lightbox.js' | relative_url }}"></script>
+  {% endif %}
 </body>
 </html>
