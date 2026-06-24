@@ -33,7 +33,7 @@
     // Remove from the DOM after the fade-out transition finishes
     setTimeout(function () {
       if (screen.parentNode) screen.parentNode.removeChild(screen);
-    }, 700);
+    }, 1800);
   }
 
   requestAnimationFrame(tick);

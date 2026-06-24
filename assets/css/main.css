@@ -2352,7 +2352,7 @@ body {
   justify-content: center;
   gap: 1.5rem;
   background: var(--ink);
-  transition: opacity 0.6s ease;
+  transition: opacity 1.8s ease;
 }
 .agp-loading-screen--hidden {
   opacity: 0;
