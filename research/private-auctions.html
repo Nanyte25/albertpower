@@ -1,0 +1,160 @@
+---
+layout: default
+title: "Private Research"
+description: "Private research notes."
+permalink: /research/private-auctions/
+robots: noindex, nofollow
+---
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <p class="hero-eyebrow">Private</p>
+    <h1 class="page-title">Password Required</h1>
+    <p class="page-subtitle">This page is not part of the public archive.</p>
+  </div>
+</header>
+
+<main class="gallery-main">
+  <div class="section-inner" style="max-width:420px; margin:3rem auto 5rem;">
+
+    <div id="agp-lock-screen">
+      <p style="color:var(--text-muted); margin-bottom:1.5rem; line-height:1.6;">
+        Enter the password to view this page. After 3 incorrect attempts you'll be
+        returned to the homepage.
+      </p>
+      <form id="agp-lock-form" autocomplete="off">
+        <input
+          type="password"
+          id="agp-lock-password"
+          placeholder="Password"
+          autocomplete="off"
+          style="width:100%; padding:0.75rem 1rem; font-family:var(--ff-body); font-size:1rem; border:1px solid var(--bronze); border-radius:4px; background:var(--vellum); color:var(--ink); margin-bottom:1rem;"
+        >
+        <button type="submit" class="btn-primary" style="width:100%;">Unlock</button>
+      </form>
+      <p id="agp-lock-error" style="color:#a33; margin-top:1rem; min-height:1.2em; font-size:0.9rem;"></p>
+      <p id="agp-lock-attempts" style="color:var(--text-muted); font-size:0.8rem; margin-top:0.5rem;"></p>
+    </div>
+
+    <div id="agp-locked-content" style="display:none;"></div>
+
+  </div>
+</main>
+
+<script>
+(function () {
+  'use strict';
+
+  var ENCRYPTED = {
+    salt: "ndgIXm0Ty5IZpWlsQc845Q==",
+    iv: "RZ1xKAhyYLdZjQrJ",
+    ciphertext: "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",
+    iterations: 250000
+  };
+
+  var MAX_ATTEMPTS = 3;
+  var HOME_URL = "{{ '/' | relative_url }}";
+  var attemptsKey = 'agp-lock-attempts-research-private-auctions';
+
+  function base64ToBytes(b64) {
+    var bin = atob(b64);
+    var bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return bytes;
+  }
+
+  function getAttempts() {
+    var v = parseInt(sessionStorage.getItem(attemptsKey) || '0', 10);
+    return isNaN(v) ? 0 : v;
+  }
+
+  function setAttempts(n) {
+    sessionStorage.setItem(attemptsKey, String(n));
+  }
+
+  async function tryDecrypt(password) {
+    var salt = base64ToBytes(ENCRYPTED.salt);
+    var iv = base64ToBytes(ENCRYPTED.iv);
+    var ciphertext = base64ToBytes(ENCRYPTED.ciphertext);
+
+    var passwordKey = await crypto.subtle.importKey(
+      'raw',
+      new TextEncoder().encode(password),
+      'PBKDF2',
+      false,
+      ['deriveKey']
+    );
+
+    var aesKey = await crypto.subtle.deriveKey(
+      { name: 'PBKDF2', salt: salt, iterations: ENCRYPTED.iterations, hash: 'SHA-256' },
+      passwordKey,
+      { name: 'AES-GCM', length: 256 },
+      false,
+      ['decrypt']
+    );
+
+    // AES-GCM decrypt will throw if the password (and therefore key) is wrong —
+    // the auth tag check fails. That's our correctness signal, not a separate
+    // password comparison.
+    var plaintextBuffer = await crypto.subtle.decrypt(
+      { name: 'AES-GCM', iv: iv },
+      aesKey,
+      ciphertext
+    );
+
+    return new TextDecoder().decode(plaintextBuffer);
+  }
+
+  var form = document.getElementById('agp-lock-form');
+  var input = document.getElementById('agp-lock-password');
+  var errorEl = document.getElementById('agp-lock-error');
+  var attemptsEl = document.getElementById('agp-lock-attempts');
+  var lockScreen = document.getElementById('agp-lock-screen');
+  var contentEl = document.getElementById('agp-locked-content');
+
+  function renderAttemptsRemaining() {
+    var remaining = MAX_ATTEMPTS - getAttempts();
+    if (remaining < MAX_ATTEMPTS && remaining > 0) {
+      attemptsEl.textContent = remaining + ' attempt' + (remaining === 1 ? '' : 's') + ' remaining.';
+    } else {
+      attemptsEl.textContent = '';
+    }
+  }
+
+  // If a previous page load in this browser tab already exhausted attempts,
+  // redirect immediately rather than showing the form again.
+  if (getAttempts() >= MAX_ATTEMPTS) {
+    window.location.href = HOME_URL;
+  }
+  renderAttemptsRemaining();
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    errorEl.textContent = '';
+    var password = input.value;
+
+    try {
+      var html = await tryDecrypt(password);
+      // Success — clear the attempt counter, reveal content.
+      setAttempts(0);
+      contentEl.innerHTML = html;
+      lockScreen.style.display = 'none';
+      contentEl.style.display = 'block';
+    } catch (err) {
+      var attempts = getAttempts() + 1;
+      setAttempts(attempts);
+      if (attempts >= MAX_ATTEMPTS) {
+        errorEl.textContent = 'Too many incorrect attempts. Redirecting...';
+        setTimeout(function () {
+          window.location.href = HOME_URL;
+        }, 1200);
+      } else {
+        errorEl.textContent = 'Incorrect password.';
+        renderAttemptsRemaining();
+        input.value = '';
+        input.focus();
+      }
+    }
+  });
+})();
+</script>
