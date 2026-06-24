@@ -1,12 +1,16 @@
 <div id="agp-loading-screen" class="agp-loading-screen" aria-hidden="true">
-  <div class="agp-loading-oval">
-    <img
-      src="{{ '/assets/images/albert-power-portrait-hq.jpg' | relative_url }}"
-      alt=""
-      width="200"
-      height="260"
-      onerror="this.style.display='none'"
-    />
+  <div class="agp-loading-frame-wrap">
+    <div class="agp-loading-ring"></div>
+    <div class="agp-loading-oval">
+      <img
+        src="{{ '/assets/images/albert-power-portrait-hq.jpg' | relative_url }}"
+        alt=""
+        width="200"
+        height="260"
+        onerror="this.style.display='none'"
+      />
+    </div>
   </div>
   <p class="agp-loading-label">Albert G. Power RHA</p>
+  <p class="agp-loading-percent" aria-live="polite"><span id="agp-loading-percent-value">0</span>%</p>
 </div>
