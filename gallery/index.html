@@ -3,208 +3,158 @@ layout: default
 title: "Gallery"
 description: "Photographs of Albert G. Power's sculptures, death masks, portrait busts and architectural works."
 permalink: /gallery/
+robots: noindex, nofollow
 ---
 
 <header class="page-header">
   <div class="page-header-inner">
     <p class="hero-eyebrow">Archive</p>
-    <h1 class="page-title">Gallery</h1>
-    <p class="page-subtitle">Photographs of works, studio, and the figures he commemorated</p>
+    <h1 class="page-title">Password Required</h1>
+    <p class="page-subtitle">Enter the password to view the gallery.</p>
   </div>
 </header>
 
 <main class="gallery-main">
-  <div class="section-inner">
+  <div class="section-inner" style="max-width:420px; margin:3rem auto 5rem;">
 
-    <section class="gallery-section">
-      <h2 class="gallery-section-title">Death Masks &amp; Life Masks — 1920–1942</h2>
-      <p class="gallery-section-intro">
-        Between 1920 and 1942 Power made death and life masks of many of the most significant 
-        figures of the Irish revolutionary period. In 1922 alone he made masks of Cathal Brugha, 
-        Arthur Griffith, Michael Collins, and Erskine Childers — four leaders dead within months 
-        of each other at the hinge point of modern Irish history.
+    <div id="agp-lock-screen">
+      <p style="color:var(--text-muted); margin-bottom:1.5rem; line-height:1.6;">
+        Enter the password to view this page. After 3 incorrect attempts you'll be
+        returned to the homepage.
       </p>
-      <div class="gallery-grid">
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/collins-death-mask.jpg" alt="Death mask of Michael Collins, 1922" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Michael Collins<br>Death Mask · 1922</div>
-          </div>
-          <figcaption><strong>Michael Collins</strong><br>Death Mask · 22 August 1922<br><em>National Museum of Ireland — Collins Barracks</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/griffith-death-mask.jpg" alt="Death mask of Arthur Griffith, 1922" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Arthur Griffith<br>Death Mask · 1922</div>
-          </div>
-          <figcaption><strong>Arthur Griffith</strong><br>Death Mask · August 1922<br><em>National Museum of Ireland</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/cathal-brugha-death-mask.jpg" alt="Death mask of Cathal Brugha, 1922" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Cathal Brugha<br>Death Mask · 1922</div>
-          </div>
-          <figcaption><strong>Cathal Brugha</strong><br>Death Mask · July 1922<br><em>Cathal Brugha Barracks, Dublin</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/erskine-childers.jpg" alt="Erskine Childers — Power family archive" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Erskine Childers<br>1922</div>
-          </div>
-          <figcaption><strong>Erskine Childers</strong><br>Death Mask · November 1922<br><em>Power Family Archive</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/macswiney-life-mask.jpg" alt="Life mask of Terence MacSwiney, 1920" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Terence MacSwiney<br>Life Mask · 1920</div>
-          </div>
-          <figcaption><strong>Terence MacSwiney</strong><br>Life Mask · October 1920<br><em>National Museum of Ireland</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/austin-stack-death-mask.jpg" alt="Death mask of Austin Stack" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Austin Stack<br>Death Mask</div>
-          </div>
-          <figcaption><strong>Austin Stack</strong><br>Death Mask · 1929<br><em>National Museum of Ireland</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/peadar-kearney-death-mask.jpg" alt="Death mask of Peadar Kearney, 1942" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Peadar Kearney<br>Death Mask · 1942</div>
-          </div>
-          <figcaption><strong>Peadar Kearney</strong><br>Death Mask · 1942<br><em>National Museum of Ireland</em></figcaption>
-        </figure>
-      </div>
-    </section>
+      <form id="agp-lock-form" autocomplete="off">
+        <input
+          type="password"
+          id="agp-lock-password"
+          placeholder="Password"
+          autocomplete="off"
+          style="width:100%; padding:0.75rem 1rem; font-family:var(--ff-body); font-size:1rem; border:1px solid var(--bronze); border-radius:4px; background:var(--vellum); color:var(--ink); margin-bottom:1rem;"
+        >
+        <button type="submit" class="btn-primary" style="width:100%;">Unlock</button>
+      </form>
+      <p id="agp-lock-error" style="color:#a33; margin-top:1rem; min-height:1.2em; font-size:0.9rem;"></p>
+      <p id="agp-lock-attempts" style="color:var(--text-muted); font-size:0.8rem; margin-top:0.5rem;"></p>
+    </div>
 
-    <div class="celtic-rule"></div>
-
-    <section class="gallery-section">
-      <h2 class="gallery-section-title">Portrait Busts</h2>
-      <div class="gallery-grid">
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/michael-collins-bust.jpg" alt="Portrait bust of Michael Collins, 1936" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Michael Collins · 1936</div>
-          </div>
-          <figcaption><strong>Michael Collins</strong><br>Bronze · 1936<br><em>National Gallery of Ireland</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/cathal-brugha-bust.jpg" alt="Portrait bust of Cathal Brugha" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Cathal Brugha Bust</div>
-          </div>
-          <figcaption><strong>Cathal Brugha</strong><br>Bronze<br><em>Signed AGP</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/countess-markievicz.jpg" alt="Countess Markievicz, 1932" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Countess Markievicz · 1932</div>
-          </div>
-          <figcaption><strong>Countess Markievicz</strong><br>Bronze · 1932<br><em>National Museum of Ireland</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/wb-yeats.jpg" alt="W.B. Yeats, 1939" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">W.B. Yeats · 1939</div>
-          </div>
-          <figcaption><strong>W.B. Yeats</strong><br>Bronze · 1939</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/grace-gifford-plunkett.jpg" alt="Grace Gifford Plunkett" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Grace Gifford Plunkett</div>
-          </div>
-          <figcaption><strong>Grace Gifford Plunkett</strong><br>Bronze<br><em>National Museum of Ireland</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/thomas-davis.jpg" alt="Thomas Davis, 1945" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Thomas Davis · 1945</div>
-          </div>
-          <figcaption><strong>Thomas Davis</strong><br>Bronze · 1945<br><em>Power's final work</em></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <div class="celtic-rule"></div>
-
-    <section class="gallery-section">
-      <h2 class="gallery-section-title">Public Monuments &amp; Architectural Work</h2>
-      <div class="gallery-grid">
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/o-conaire-memorial.jpg" alt="Pádraic Ó Conaire, Galway, 1935" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Pádraic Ó Conaire · 1935</div>
-          </div>
-          <figcaption><strong>Pádraic Ó Conaire</strong><br>Bronze · 1935<br><em>Eyre Square, Galway</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/gresham-hotel-facade.jpg" alt="Gresham Hotel facade, 1926" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Gresham Hotel · 1926</div>
-          </div>
-          <figcaption><strong>Gresham Hotel Facade</strong><br>Stone · 1926<br><em>O'Connell Street, Dublin</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/figure-of-science-1911.jpg" alt="Figure of Science, Government Buildings, 1911" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Figure of Science · 1911</div>
-          </div>
-          <figcaption><strong>Figure of Science</strong><br>Stone · 1911<br><em>Government Buildings, Dublin</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/power-working-carndonagh.jpg" alt="Power working on Sacred Heart statue, 1943-45" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Power at work · 1943–45</div>
-          </div>
-          <figcaption><strong>Albert G. Power at work</strong><br>Sacred Heart · Carndonagh, Co. Donegal<br><em>1943–45 · His final commission</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/collins-griffith-cenotaph.jpg" alt="Memorial cenotaph to Collins and Griffith, 1923" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Collins &amp; Griffith Cenotaph · 1923</div>
-          </div>
-          <figcaption><strong>Memorial Cenotaph</strong><br>Collins &amp; Griffith · 1923<br><em>With George Atkinson</em></figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/power-monument-glasnevin.jpg" alt="Power's monument, Glasnevin Cemetery" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Power Monument<br>Glasnevin</div>
-          </div>
-          <figcaption><strong>Power's Monument</strong><br>Glasnevin Cemetery, Dublin</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <div class="celtic-rule"></div>
-
-    <section class="gallery-section gallery-section--personal">
-      <h2 class="gallery-section-title">The Sculptor</h2>
-      <div class="gallery-grid gallery-grid--3">
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/albert-power-portrait.jpg" alt="Albert G. Power" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Albert G. Power</div>
-          </div>
-          <figcaption><strong>Albert George Power RHA</strong><br>1881–1945</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/dmsa-friends-1900s.jpg" alt="Power with friends at DMSA, early 1900s" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">DMSA · Early 1900s</div>
-          </div>
-          <figcaption><strong>Dublin Metropolitan School of Art</strong><br>Power with fellow students · Early 1900s</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-img-wrap">
-            <img src="/assets/images/coinage-entry-1928.jpg" alt="Power's coinage entry, Irish Free State, 1928" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="img-placeholder" style="display:none">Coinage Entry · 1928</div>
-          </div>
-          <figcaption><strong>Irish Free State Coinage Entry</strong><br>1928</figcaption>
-        </figure>
-      </div>
-    </section>
+    <div id="agp-locked-content" style="display:none;"></div>
 
   </div>
 </main>
+
+<script>
+(function () {
+  'use strict';
+
+  var ENCRYPTED = {
+    salt: "DS3SLCB2FDkcG1oJ5HmyiQ==",
+    iv: "8FgTGc0GHyjBkCdi",
+    ciphertext: "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",
+    iterations: 250000
+  };
+
+  var MAX_ATTEMPTS = 3;
+  var HOME_URL = "{{ '/' | relative_url }}";
+  var attemptsKey = 'agp-lock-attempts-gallery';
+
+  function base64ToBytes(b64) {
+    var bin = atob(b64);
+    var bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return bytes;
+  }
+
+  function getAttempts() {
+    var v = parseInt(sessionStorage.getItem(attemptsKey) || '0', 10);
+    return isNaN(v) ? 0 : v;
+  }
+
+  function setAttempts(n) {
+    sessionStorage.setItem(attemptsKey, String(n));
+  }
+
+  async function tryDecrypt(password) {
+    var salt = base64ToBytes(ENCRYPTED.salt);
+    var iv = base64ToBytes(ENCRYPTED.iv);
+    var ciphertext = base64ToBytes(ENCRYPTED.ciphertext);
+
+    var passwordKey = await crypto.subtle.importKey(
+      'raw',
+      new TextEncoder().encode(password),
+      'PBKDF2',
+      false,
+      ['deriveKey']
+    );
+
+    var aesKey = await crypto.subtle.deriveKey(
+      { name: 'PBKDF2', salt: salt, iterations: ENCRYPTED.iterations, hash: 'SHA-256' },
+      passwordKey,
+      { name: 'AES-GCM', length: 256 },
+      false,
+      ['decrypt']
+    );
+
+    var plaintextBuffer = await crypto.subtle.decrypt(
+      { name: 'AES-GCM', iv: iv },
+      aesKey,
+      ciphertext
+    );
+
+    return new TextDecoder().decode(plaintextBuffer);
+  }
+
+  var form = document.getElementById('agp-lock-form');
+  var input = document.getElementById('agp-lock-password');
+  var errorEl = document.getElementById('agp-lock-error');
+  var attemptsEl = document.getElementById('agp-lock-attempts');
+  var lockScreen = document.getElementById('agp-lock-screen');
+  var contentEl = document.getElementById('agp-locked-content');
+
+  function renderAttemptsRemaining() {
+    var remaining = MAX_ATTEMPTS - getAttempts();
+    if (remaining < MAX_ATTEMPTS && remaining > 0) {
+      attemptsEl.textContent = remaining + ' attempt' + (remaining === 1 ? '' : 's') + ' remaining.';
+    } else {
+      attemptsEl.textContent = '';
+    }
+  }
+
+  if (getAttempts() >= MAX_ATTEMPTS) {
+    window.location.href = HOME_URL;
+  }
+  renderAttemptsRemaining();
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    errorEl.textContent = '';
+    var password = input.value;
+
+    try {
+      var html = await tryDecrypt(password);
+      setAttempts(0);
+      contentEl.innerHTML = html;
+      lockScreen.style.display = 'none';
+      contentEl.style.display = 'block';
+      // Re-trigger the gallery lightbox now that the gallery markup actually
+      // exists in the DOM (it didn't at the original DOMContentLoaded, since
+      // the content was still encrypted at that point).
+      if (window.AGPGalleryLightbox) {
+        window.AGPGalleryLightbox.init();
+      }
+    } catch (err) {
+      var attempts = getAttempts() + 1;
+      setAttempts(attempts);
+      if (attempts >= MAX_ATTEMPTS) {
+        errorEl.textContent = 'Too many incorrect attempts. Redirecting...';
+        setTimeout(function () {
+          window.location.href = HOME_URL;
+        }, 1200);
+      } else {
+        errorEl.textContent = 'Incorrect password.';
+        renderAttemptsRemaining();
+        input.value = '';
+        input.focus();
+      }
+    }
+  });
+})();
+</script>

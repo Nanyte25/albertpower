@@ -130,6 +130,19 @@
     });
   }
 
+  function init() {
+    items = [];
+    if (!document.querySelector('.gallery-item')) return; // nothing to wire up yet
+    buildItemList();
+    if (items.length === 0) return;
+    if (!lightboxEl) buildLightboxDOM();
+  }
+
+  // Expose for pages that inject gallery content dynamically (e.g. after a
+  // password-gate decrypts and inserts the gallery HTML) so they can call
+  // window.AGPGalleryLightbox.init() once the content actually exists.
+  window.AGPGalleryLightbox = { init: init };
+
   document.addEventListener('keydown', function (e) {
     if (!lightboxEl || !lightboxEl.classList.contains('agp-lightbox--open')) return;
     if (e.key === 'Escape') closeLightbox();
@@ -137,10 +150,5 @@
     if (e.key === 'ArrowRight') showRelative(1);
   });
 
-  document.addEventListener('DOMContentLoaded', function () {
-    if (!document.querySelector('.gallery-item')) return; // only on gallery page
-    buildItemList();
-    if (items.length === 0) return;
-    buildLightboxDOM();
-  });
+  document.addEventListener('DOMContentLoaded', init);
 })();
