@@ -65,7 +65,12 @@
   </script>
   {% endif %}
 </head>
-<body>
+<body{% if page.url == '/' %} class="agp-has-loading-screen"{% endif %}>
+
+  {% if page.url == '/' %}
+  {% include loading-screen.html %}
+  <script src="{{ '/assets/js/loading-screen.js' | relative_url }}"></script>
+  {% endif %}
 
   {% include nav.html %}
 
