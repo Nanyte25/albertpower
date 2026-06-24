@@ -2101,6 +2101,44 @@ body {
   }
 }
 
+/* ── Family tree page: text containers ── */
+.tree-intro-box {
+  border: 1px solid var(--bronze, #8b7355);
+  border-radius: 4px;
+  background: var(--paper, #f1ede3);
+  padding: 1.1rem 1.4rem;
+  margin: 0 auto 1.5rem;
+  max-width: 720px;
+}
+.tree-intro-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-primary, #2A2620);
+}
+@media (prefers-color-scheme: dark) {
+  .tree-intro-box { background: rgba(255,255,255,0.03); }
+}
+
+.tree-sources-box {
+  border: 1px solid var(--bronze, #8b7355);
+  border-radius: 4px;
+  background: var(--paper, #f1ede3);
+  padding: 0.9rem 1.2rem;
+  margin: 0 auto;
+  max-width: 720px;
+}
+.tree-sources-box p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--text-muted, #6B5E4E);
+  font-style: italic;
+}
+@media (prefers-color-scheme: dark) {
+  .tree-sources-box { background: rgba(255,255,255,0.03); }
+}
+
 /* ── Honest "unverified / needs research" note ── */
 .research-note {
   border: 1px dashed var(--bronze, #8b7355);
