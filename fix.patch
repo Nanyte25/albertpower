@@ -1,0 +1,73 @@
+From 88d0d66c3fb918d79b654dbd43298020ff35d444 Mon Sep 17 00:00:00 2001
+From: Mark Freer <freer.mark@gmail.com>
+Date: Wed, 24 Jun 2026 16:50:05 +0000
+Subject: [PATCH] fix: scope image default away from works collection, fix O Conaire image, clean up Childers empty image key
+
+- Root cause of duplicate-portrait bug: global _config.yml default injected
+  albert-power-portrait.jpg as the image for EVERY page/document site-wide,
+  including the works collection. Works without a documented photo were
+  silently inheriting Albert's portrait instead of falling through to the
+  'ADD IMAGE' placeholder SVG on the works index.
+- Rescoped the default to type: pages only, and added it explicitly to the
+  posts default instead, so SEO/OG image fallback still works for the
+  homepage and blog posts without leaking into works.
+- Wired in the colour family-archive photo (o-conaire-memorial-2.jpg) as the
+  Padraic O Conaire work image -- an authentic in-situ photo at Eyre Square.
+- Removed the empty image: "" key on the Erskine Childers entry (was
+  resolving to a self-referential URL via relative_url); omitting the key
+  entirely lets it fall through to the placeholder correctly.
+---
+ _config.yml                           | 2 ++
+ _works/death-mask-erskine-childers.md | 1 -
+ _works/o-conaire.md                   | 3 ++-
+ 3 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/_config.yml b/_config.yml
+index 0165978..a2448e5 100644
+--- a/_config.yml
++++ b/_config.yml
+@@ -36,6 +36,7 @@ collections:
+ defaults:
+   - scope:
+       path: ""
++      type: "pages"
+     values:
+       image: /assets/images/albert-power-portrait.jpg
+   - scope:
+@@ -44,6 +45,7 @@ defaults:
+     values:
+       layout: "post"
+       author: "Power Family Archive"
++      image: /assets/images/albert-power-portrait.jpg
+   - scope:
+       path: ""
+       type: "works"
+diff --git a/_works/death-mask-erskine-childers.md b/_works/death-mask-erskine-childers.md
+index 4a2d3ef..5b9bd78 100644
+--- a/_works/death-mask-erskine-childers.md
++++ b/_works/death-mask-erskine-childers.md
+@@ -6,7 +6,6 @@ location: "Private collection / family archive"
+ collection: "Power Family Archive"
+ dimensions: "Life-size"
+ order: 5
+-image: ""
+ description: "A death mask of Erskine Childers (1922) is recorded in family tradition as a work by Albert G. Power RHA, but this has not been independently confirmed and no photograph of it has been located. The image previously used on this page was a different work entirely — James Power's later memorial bust of President Erskine Childers (the son, d. 1974) — and has been removed pending clarification."
+ ---
+ 
+diff --git a/_works/o-conaire.md b/_works/o-conaire.md
+index bd40543..1c861ee 100644
+--- a/_works/o-conaire.md
++++ b/_works/o-conaire.md
+@@ -5,8 +5,9 @@ medium: "Bronze"
+ location: "Eyre Square, Galway"
+ collection: "Public Commission"
+ dimensions: "Slightly under life-size, seated figure"
++image: "/assets/images/o-conaire-memorial-2.jpg"
+ image_alt: "Bronze seated figure of Pádraic Ó Conaire, Eyre Square, Galway"
+-image_caption: "Pádraic Ó Conaire, 1935. Bronze. Eyre Square, Galway. Photograph: add credit here."
++image_caption: "Pádraic Ó Conaire, 1935. Bronze. Eyre Square, Galway. Photograph: Power family archive."
+ order: 1
+ description: "Bronze memorial to Connacht writer Pádraic Ó Conaire (1935) by Albert G. Power RHA. Unveiled in Eyre Square, Galway — Power's most celebrated public commission and an enduring symbol of Irish cultural identity."
+ ---
+-- 
+2.43.0

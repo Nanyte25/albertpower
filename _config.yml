@@ -36,6 +36,7 @@ collections:
 defaults:
   - scope:
       path: ""
+      type: "pages"
     values:
       image: /assets/images/albert-power-portrait.jpg
   - scope:
@@ -44,6 +45,7 @@ defaults:
     values:
       layout: "post"
       author: "Power Family Archive"
+      image: /assets/images/albert-power-portrait.jpg
   - scope:
       path: ""
       type: "works"

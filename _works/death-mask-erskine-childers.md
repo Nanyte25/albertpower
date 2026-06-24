@@ -6,7 +6,6 @@ location: "Private collection / family archive"
 collection: "Power Family Archive"
 dimensions: "Life-size"
 order: 5
-image: ""
 description: "A death mask of Erskine Childers (1922) is recorded in family tradition as a work by Albert G. Power RHA, but this has not been independently confirmed and no photograph of it has been located. The image previously used on this page was a different work entirely — James Power's later memorial bust of President Erskine Childers (the son, d. 1974) — and has been removed pending clarification."
 ---
 
